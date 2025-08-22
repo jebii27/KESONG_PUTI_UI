@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fdfbe9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      border: 8px solid #064420;
+    }
+
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 80px;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+    }
+
+    .logo img {
+      width: 590px;
+    }
+
+    .circles {
+      display: flex;
+      gap: 20px;
+      position: absolute;
+      bottom: 5px;   
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .circle {
+      width: 60px;
+      height: 60px;
+      background-color: #002d13; 
+      border-radius: 50%;
+    }
+
+    .contact-form {
+      text-align: center;
+      max-width: 420px;
+      width: 100%;
+    }
+
+    .contact-form h2 {
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    .contact-form p {
+      font-size: 15px;
+      color: #064420;
+      margin-bottom: 25px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .input-group {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-group i {
+      position: absolute;
+      left: 12px;
+      font-size: 16px;
+      color: #444;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .input-group input,
+    .input-group textarea {
+      width: 100%;
+      padding: 10px 12px 10px 40px;
+      border: 2px solid #000;
+      border-radius: 6px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .input-group input {
+      height: 45px;
+    }
+
+    .input-group textarea {
+      resize: none;
+      height: 100px;
+      padding-top: 12px;
+    }
+
+    
+    .input-group.textarea i {
+      top: 15px; 
+      transform: none;
+    }
+
+   
+    .contact-form button {
+      background-color: #f4c400;
+      color: #000;
+      font-weight: bold;
+      border: 2px solid #000;
+      border-radius: 25px;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 200px;
+      margin: 15px auto 0 auto;
+      transition: 0.3s;
+      box-shadow: 2px 3px 6px rgba(0,0,0,0.3);
+    }
+
+    .contact-form button:hover {
+      background-color: #e0b200;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Logo + Circles -->
+    <div class="logo">
+      <img src="c:\Users\Steph\Downloads\ChatGPT_Image_Jun_15__2025__01_52_01_PM-removebg-preview.png" alt="Kesong Puti Logo">
+      <div class="circles">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you! Send us a message—we’ll get back to you as soon as we can!</p>
+      <form>
+        <div class="input-group">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" placeholder="Name">
+        </div>
+        <div class="input-group">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" placeholder="Email">
+        </div>
+        <div class="input-group">
+          <i class="fa-solid fa-phone"></i>
+          <input type="text" placeholder="Contact Number">
+        </div>
+        <div class="input-group textarea">
+          <i class="fa-solid fa-comment"></i>
+          <textarea placeholder="Message"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
