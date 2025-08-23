@@ -1,23 +1,13 @@
 :root {
 
-    /* Background Color */
-    --bg-white: #FFFCF6;
-    --bg-beige: #FFFBE6;
-    --bg-green: #347928;
-    --bg-mint: #C0EBA6;
-    --bg-yellow: #FCCD2A;
-
     /* General Color */
-    --green: #347928;
-    --black: #0D0E0E;
     --white: #FFFCF6;
-    --yellow: #FCCD2A;
-    --beige: #FFFBE6;
-    --mint: #C0EBA6;
-
-    /* Button Color */
-    --btn-yellow: #FCCD2A;
-    --btn-green: #347928;
-    --btn-mint: #C0EBA6;
+    --beige: #F5F0E6;
+    --green: #058240;
+    --mint: #87C159;
+    --yellow: #F3C301;
+    --light-yellow: #FEE3A2;
+    --ashgrey: #ADCACB;
+    --black: #0D0E0E;
 
 }

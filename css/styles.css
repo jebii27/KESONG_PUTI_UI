@@ -181,7 +181,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--white);
     text-align: center;
 }
 
@@ -195,8 +195,8 @@
 
 /* product section */
 .product-section {
-    height: auto;
-    background-color: var(--bg-white);
+    min-height: 100vh;
+    background-color: var(--beige);
 
 }
 
@@ -321,6 +321,7 @@
     border-radius: 8px;
     padding: 8px 14px;
     transition: all 0.2s ease-in-out;
+    background-color: transparent;
 }
 
 .pagination .page-item.active .page-link {
@@ -345,19 +346,30 @@
 
 /* FOOTER */
 footer {
-    padding: 40px 10px;
+    padding: 30px 0;
+    background-color: rgb(253, 242, 217);
+    background-image: url(/assets/leave.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Logo */
 .footer-logo img {
-    max-width: 160px;
+    max-width: 200px;
 }
 
 /* Social icons */
 .social-icons {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
     gap: 15px;
 }
 
@@ -371,19 +383,12 @@ footer {
     color: white;
     font-size: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
+    background-color: var(--green)
 }
 
 .social-circle:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.facebook {
-    background-color: #1877f2;
-}
-
-.instagram {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
 /* Contact form */
@@ -404,7 +409,7 @@ footer {
 }
 
 .submit-btn {
-    background-color: #FFD700;
+    background-color: var(--yellow);
     border: 2px solid #000;
     border-radius: 25px;
     padding: 8px 25px;
@@ -426,15 +431,15 @@ footer {
 
 .footer-links a {
     display: block;
-    font-weight: 600;
+    font-weight: 500;
     margin: 6px 0;
     text-decoration: none;
-    color: #133a19;
+    color: var(--black);
     transition: color 0.3s;
 }
 
 .footer-links a:hover {
-    color: #1877f2;
+    color: var(--mint);
 }
 
 /* Contact info */
@@ -446,18 +451,19 @@ footer {
 .contact-info p {
     margin: 6px 0;
     font-weight: 500;
+    color: var(--black);
 }
 
 .contact-info i {
     margin-right: 8px;
-    color: #133a19;
+    color: var(--black);
 }
 
 /* Section titles */
 .footer-title {
     font-weight: 700;
-    margin-bottom: 10px;
-    color: #133a19;
+    color: var(--green);
+    font-size: 25px;
 }
 
 /* Footer bottom */
@@ -473,7 +479,7 @@ footer {
 
 /* FOOTER */
 
-#leaves {
+/* #leaves {
     position: relative;
     top: -50px;
     width: 100%;
@@ -719,4 +725,4 @@ footer {
             translate3d(-400px, 680px, 0) rotate(0deg);
         opacity: 0;
     }
-}
+} */
