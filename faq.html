@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kesong Puti - Products</title>
 
     <!-- BOOTSTRAP -->
     <link
@@ -20,13 +20,15 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/demo.css" />
   </head>
-  <body>
+
+  <body style="background-color: var(--beige)">
     <!-- NAVBAR -->
     <nav
       class="navbar navbar-expand-lg fixed-top navbar-transparent navbar-hidden navbar-visible"
       id="mainNavbar"
+      style="background-color: var(--white)"
     >
       <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="#"
@@ -75,7 +77,7 @@
       <div
         class="cart-header d-flex justify-content-between align-items-center p-3 border-bottom"
       >
-        <h5>My Cart</h5>
+        <h5 class="mb-0">My Cart</h5>
         <button class="btn btn-md" id="closeCart">
           <i class="bi bi-x-lg"></i>
         </button>
@@ -129,6 +131,7 @@
         </div>
       </div>
 
+      <!-- Footer -->
       <div class="cart-footer p-3 border-top">
         <div class="d-flex justify-content-between mb-2">
           <strong>Total:</strong>
@@ -137,251 +140,222 @@
         <button class="btn btn-dark w-100">Checkout</button>
       </div>
     </div>
-
-    <div class="overlay" id="overlay"></div>
     <!-- CART SIDEBAR -->
+
+    <!-- CART OVERLAY -->
+    <div class="overlay" id="overlay"></div>
+    <!-- CART OVERLAY -->
 
     <!-- PRODUCTS PAGE HEADER -->
     <section class="product-page">
-      <div>
-        <h1 class="mt-5">OUR PRODUCTS</h1>
+      <div class="header-text">
+        <h1>FAQ</h1>
+        <div class="breadcrumb">
+          <a href="index.html"><span>Home</span> </a>
+          <p class="separator">-</p>
+          <span>FAQ</span>
+        </div>
       </div>
     </section>
     <!-- PRODUCTS PAGE HEADER -->
 
-    <!-- PRODUCTS -->
-    <section class="product-section">
-      <div class="container">
-        <div class="pt-5 filter-bar">
-          <!-- filter -->
-          <div class="d-flex align-items-center filter-options">
-            <span class="filter-label">Filter:</span>
-
-            <!-- Type Dropdown -->
-            <div class="dropdown">
-              <button
-                class="dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="faq-box mb-5">
+        <div class="p-5">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq1"
+                >
+                  Lorem Ipsum
+                </button>
+              </h2>
+              <div
+                id="faq1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
               >
-                Type <i class="bi bi-chevron-down"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Keso</a></li>
-                <li><a class="dropdown-item" href="#">Ice Cream</a></li>
-                <li><a class="dropdown-item" href="#">Kotse</a></li>
-              </ul>
+                <div class="accordion-body">This is the answer for FAQ 1.</div>
+              </div>
             </div>
 
-            <!-- Availability Dropdown -->
-            <div class="dropdown">
-              <button
-                class="dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq2"
+                >
+                  Lorem Ipsum
+                </button>
+              </h2>
+              <div
+                id="faq2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
               >
-                Availability <i class="bi bi-chevron-down"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">In Stock</a></li>
-                <li><a class="dropdown-item" href="#">Out of Stock</a></li>
-              </ul>
+                <div class="accordion-body">This is the answer for FAQ 2.</div>
+              </div>
             </div>
 
-            <!-- Branches Dropdown -->
-            <div class="dropdown">
-              <button
-                class="dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq3"
+                >
+                  Lorem Ipsum
+                </button>
+              </h2>
+              <div
+                id="faq3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
               >
-                Branches <i class="bi bi-chevron-down"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Branch 1</a></li>
-                <li><a class="dropdown-item" href="#">Branch 2</a></li>
-                <li><a class="dropdown-item" href="#">Branch 3</a></li>
-              </ul>
+                <div class="accordion-body">This is the answer for FAQ 3.</div>
+              </div>
             </div>
-          </div>
-          <!-- product number -->
-          <div class="product-count">50 products</div>
-        </div>
 
-        <div class="row g-4 mt-2">
-          <div class="col-md-3 col-sm-6">
-            <div class="card product-card">
-              <img
-                src="assets/banana-leaf.png"
-                class="card-img-top"
-                alt="Product Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product Name</h5>
-                <p class="product-price">₱1,250.00</p>
-                <button class="btn-view mb-1">View</button>
-                <button class="btn-add-to-cart">Add to Bag</button>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq4"
+                >
+                  Lorem Ipsum
+                </button>
+              </h2>
+              <div
+                id="faq4"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">This is the answer for FAQ 4.</div>
               </div>
             </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="card product-card">
-              <img
-                src="assets/banana-leaf.png"
-                class="card-img-top"
-                alt="Product Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product Name</h5>
-                <p class="product-price">₱1,250.00</p>
-                <button class="btn-view mb-1">View</button>
-                <button class="btn-add-to-cart">Add to Bag</button>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq5"
+                >
+                  Lorem Ipsum
+                </button>
+              </h2>
+              <div
+                id="faq5"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">This is the answer for FAQ 5.</div>
               </div>
             </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="card product-card">
-              <img
-                src="assets/banana-leaf.png"
-                class="card-img-top"
-                alt="Product Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product Name</h5>
-                <p class="product-price">₱1,250.00</p>
-                <button class="btn-view mb-1">View</button>
-                <button class="btn-add-to-cart">Add to Bag</button>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq6"
+                >
+                  Lorem Ipsum
+                </button>
+              </h2>
+              <div
+                id="faq6"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">This is the answer for FAQ 5.</div>
               </div>
             </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="card product-card">
-              <img
-                src="assets/banana-leaf.png"
-                class="card-img-top"
-                alt="Product Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product Name</h5>
-                <p class="product-price">₱1,250.00</p>
-                <button class="btn-view mb-1">View</button>
-                <button class="btn-add-to-cart">Add to Bag</button>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq7"
+                >
+                  Lorem Ipsum
+                </button>
+              </h2>
+              <div
+                id="faq7"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">This is the answer for FAQ 5.</div>
               </div>
             </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="card product-card">
-              <img
-                src="assets/banana-leaf.png"
-                class="card-img-top"
-                alt="Product Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product Name</h5>
-                <p class="product-price">₱1,250.00</p>
-                <button class="btn-view mb-1">View</button>
-                <button class="btn-add-to-cart">Add to Bag</button>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq7"
+                >
+                  Lorem Ipsum
+                </button>
+              </h2>
+              <div
+                id="faq7"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">This is the answer for FAQ 5.</div>
               </div>
             </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="card product-card">
-              <img
-                src="assets/banana-leaf.png"
-                class="card-img-top"
-                alt="Product Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product Name</h5>
-                <p class="product-price">₱1,250.00</p>
-                <button class="btn-view mb-1">View</button>
-                <button class="btn-add-to-cart">Add to Bag</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="card product-card">
-              <img
-                src="assets/banana-leaf.png"
-                class="card-img-top"
-                alt="Product Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product Name</h5>
-                <p class="product-price">₱1,250.00</p>
-                <button class="btn-view mb-1">View</button>
-                <button class="btn-add-to-cart">Add to Bag</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="card product-card">
-              <img
-                src="assets/banana-leaf.png"
-                class="card-img-top"
-                alt="Product Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product Name</h5>
-                <p class="product-price">₱1,250.00</p>
-                <button class="btn-view mb-1">View</button>
-                <button class="btn-add-to-cart">Add to Bag</button>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq8"
+                >
+                  Lorem Ipsum
+                </button>
+              </h2>
+              <div
+                id="faq8"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">This is the answer for FAQ 5.</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- pagination -->
-      <!-- <div class="container">
-        <ul class="pagination pb-5">
-          <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1">Previous</a>
-          </li>
-          <li class="page-item active">
-            <a class="page-link shadow-none" href="#">1</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link shadow-none" href="#">2</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link shadow-none" href="#">3</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link shadow-none" href="#">Next</a>
-          </li>
-        </ul>
-      </div> -->
     </section>
-    <!-- PRODUCTS -->
+    <!-- FAQ -->
 
     <!-- FOOTER -->
     <footer>
       <div class="container footer-container">
-        <!-- <div id="leaves">
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-        </div> -->
         <div class="row">
           <!-- contact us form -->
           <div class="col-md-3 col-sm-12 contact-form">
-            <h5 class="footer-title">Contact Us</h5>
+            <h5 class="footer-title">Leave A Message</h5>
             <p class="small">
               We’d love to hear from you! Send us a message—we’ll get back to
               you as soon as we can!
@@ -607,25 +581,6 @@
       });
 
       updateCartTotal();
-    </script>
-
-    <!-- PRODUCT FILTER FUNCTION -->
-    <script>
-      // Replace dropdown button text when option clicked
-      document
-        .querySelectorAll(".dropdown-menu .dropdown-item")
-        .forEach((item) => {
-          item.addEventListener("click", function (e) {
-            e.preventDefault();
-
-            let dropdown = this.closest(".dropdown");
-            let button = dropdown.querySelector(".dropdown-toggle");
-
-            // Update button text with chosen option
-            button.innerHTML =
-              this.textContent + ' <i class="bi bi-chevron-down"></i>';
-          });
-        });
     </script>
   </body>
 </html>

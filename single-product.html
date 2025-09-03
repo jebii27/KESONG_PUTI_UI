@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kesong Puti - Products</title>
 
     <!-- BOOTSTRAP -->
     <link
@@ -22,11 +22,13 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body>
+
+  <body style="background-color: var(--beige)">
     <!-- NAVBAR -->
     <nav
       class="navbar navbar-expand-lg fixed-top navbar-transparent navbar-hidden navbar-visible"
       id="mainNavbar"
+      style="background-color: var(--white)"
     >
       <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="#"
@@ -75,7 +77,7 @@
       <div
         class="cart-header d-flex justify-content-between align-items-center p-3 border-bottom"
       >
-        <h5>My Cart</h5>
+        <h5 class="mb-0">My Cart</h5>
         <button class="btn btn-md" id="closeCart">
           <i class="bi bi-x-lg"></i>
         </button>
@@ -129,6 +131,7 @@
         </div>
       </div>
 
+      <!-- Footer -->
       <div class="cart-footer p-3 border-top">
         <div class="d-flex justify-content-between mb-2">
           <strong>Total:</strong>
@@ -137,226 +140,206 @@
         <button class="btn btn-dark w-100">Checkout</button>
       </div>
     </div>
-
-    <div class="overlay" id="overlay"></div>
     <!-- CART SIDEBAR -->
+
+    <!-- CART OVERLAY -->
+    <div class="overlay" id="overlay"></div>
+    <!-- CART OVERLAY -->
 
     <!-- PRODUCTS PAGE HEADER -->
     <section class="product-page">
-      <div>
-        <h1 class="mt-5">OUR PRODUCTS</h1>
+      <div class="header-text">
+        <h1>Product Details</h1>
+        <div class="breadcrumb">
+          <a href="index.html"><span>Home</span> </a>
+          <p class="separator">-</p>
+          <span>Product Details</span>
+        </div>
       </div>
     </section>
     <!-- PRODUCTS PAGE HEADER -->
 
-    <!-- PRODUCTS -->
-    <section class="product-section">
-      <div class="container">
-        <div class="pt-5 filter-bar">
-          <!-- filter -->
-          <div class="d-flex align-items-center filter-options">
-            <span class="filter-label">Filter:</span>
+    <!-- PRODUCT DETAILS -->
+    <div class="container py-5">
+      <div class="row g-4 align-items-start">
+        <!-- Product Image -->
+        <div class="col-md-6">
+          <img
+            src="assets/banana-leaf.png"
+            alt="Product Image"
+            class="img-fluid rounded-4 shadow product-image"
+            id="mainImage"
+          />
 
-            <!-- Type Dropdown -->
-            <div class="dropdown">
-              <button
-                class="dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Type <i class="bi bi-chevron-down"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Keso</a></li>
-                <li><a class="dropdown-item" href="#">Ice Cream</a></li>
-                <li><a class="dropdown-item" href="#">Kotse</a></li>
-              </ul>
+          <div class="row mt-3">
+            <div class="col-3">
+              <img
+                src="assets/banana-leaf.png"
+                class="thumb-image"
+                onclick="changeImage(this)"
+              />
             </div>
 
-            <!-- Availability Dropdown -->
-            <div class="dropdown">
-              <button
-                class="dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Availability <i class="bi bi-chevron-down"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">In Stock</a></li>
-                <li><a class="dropdown-item" href="#">Out of Stock</a></li>
-              </ul>
+            <div class="col-3">
+              <img
+                src="assets/banana-leaf.png"
+                class="thumb-image"
+                onclick="changeImage(this)"
+              />
             </div>
 
-            <!-- Branches Dropdown -->
-            <div class="dropdown">
-              <button
-                class="dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Branches <i class="bi bi-chevron-down"></i>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Branch 1</a></li>
-                <li><a class="dropdown-item" href="#">Branch 2</a></li>
-                <li><a class="dropdown-item" href="#">Branch 3</a></li>
-              </ul>
+            <div class="col-3">
+              <img
+                src="assets/banana-leaf.png"
+                class="thumb-image"
+                onclick="changeImage(this)"
+              />
+            </div>
+
+            <div class="col-3">
+              <img
+                src="assets/banana-leaf.png"
+                class="thumb-image"
+                onclick="changeImage(this)"
+              />
             </div>
           </div>
-          <!-- product number -->
-          <div class="product-count">50 products</div>
         </div>
 
-        <div class="row g-4 mt-2">
-          <div class="col-md-3 col-sm-6">
-            <div class="card product-card">
-              <img
-                src="assets/banana-leaf.png"
-                class="card-img-top"
-                alt="Product Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product Name</h5>
-                <p class="product-price">₱1,250.00</p>
-                <button class="btn-view mb-1">View</button>
-                <button class="btn-add-to-cart">Add to Bag</button>
-              </div>
-            </div>
+        <!-- Product Details -->
+        <div class="col-md-6">
+          <h1 class="product-title">Gourmet Griddle Masterpiece</h1>
+          <p class="text-muted">
+            Plant-based dining is no longer a niche it's a movement. Chefs are
+            pushing the boundaries of creativity. Plant-based dining is no
+            longer a niche it's a movement. Chefs are pushing the boundaries of
+            creativity. Plant-based dining is no longer a niche it's a movement.
+            Chefs are pushing the boundaries of creativity.
+          </p>
+
+          <div class="branch mb-2">
+            <span>Branch 1</span>
           </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="card product-card">
-              <img
-                src="assets/banana-leaf.png"
-                class="card-img-top"
-                alt="Product Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product Name</h5>
-                <p class="product-price">₱1,250.00</p>
-                <button class="btn-view mb-1">View</button>
-                <button class="btn-add-to-cart">Add to Bag</button>
-              </div>
-            </div>
+
+          <div class="d-flex align-items-center mb-3">
+            <span class="product-price">₱1000</span>
+            <span class="old-price">₱1000</span>
           </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="card product-card">
-              <img
-                src="assets/banana-leaf.png"
-                class="card-img-top"
-                alt="Product Image"
+
+          <!-- Quantity & Variation -->
+          <div class="d-flex mb-3">
+            <div class="qty-box">
+              <button class="qty-btn" onclick="changeQty(-1)">−</button>
+              <input
+                type="text"
+                id="quantity"
+                class="qty-input"
+                value="1"
+                readonly
               />
-              <div class="card-body">
-                <h5 class="card-title">Product Name</h5>
-                <p class="product-price">₱1,250.00</p>
-                <button class="btn-view mb-1">View</button>
-                <button class="btn-add-to-cart">Add to Bag</button>
-              </div>
+              <button class="qty-btn" onclick="changeQty(1)">+</button>
             </div>
+
+            <select class="variation form-select w-auto shadow-none">
+              <option selected>Variation Size</option>
+              <option value="1">Small</option>
+              <option value="2">Medium</option>
+              <option value="3">Large</option>
+            </select>
           </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="card product-card">
-              <img
-                src="assets/banana-leaf.png"
-                class="card-img-top"
-                alt="Product Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product Name</h5>
-                <p class="product-price">₱1,250.00</p>
-                <button class="btn-view mb-1">View</button>
-                <button class="btn-add-to-cart">Add to Bag</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="card product-card">
-              <img
-                src="assets/banana-leaf.png"
-                class="card-img-top"
-                alt="Product Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product Name</h5>
-                <p class="product-price">₱1,250.00</p>
-                <button class="btn-view mb-1">View</button>
-                <button class="btn-add-to-cart">Add to Bag</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="card product-card">
-              <img
-                src="assets/banana-leaf.png"
-                class="card-img-top"
-                alt="Product Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product Name</h5>
-                <p class="product-price">₱1,250.00</p>
-                <button class="btn-view mb-1">View</button>
-                <button class="btn-add-to-cart">Add to Bag</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="card product-card">
-              <img
-                src="assets/banana-leaf.png"
-                class="card-img-top"
-                alt="Product Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product Name</h5>
-                <p class="product-price">₱1,250.00</p>
-                <button class="btn-view mb-1">View</button>
-                <button class="btn-add-to-cart">Add to Bag</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <div class="card product-card">
-              <img
-                src="assets/banana-leaf.png"
-                class="card-img-top"
-                alt="Product Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Product Name</h5>
-                <p class="product-price">₱1,250.00</p>
-                <button class="btn-view mb-1">View</button>
-                <button class="btn-add-to-cart">Add to Bag</button>
-              </div>
-            </div>
-          </div>
+
+          <!-- Add to Cart Button -->
+          <button class="btn-add">Add To Cart</button>
+          <button class="btn-buy">Buy Now</button>
         </div>
       </div>
 
-      <!-- pagination -->
-      <!-- <div class="container">
-        <ul class="pagination pb-5">
-          <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1">Previous</a>
-          </li>
-          <li class="page-item active">
-            <a class="page-link shadow-none" href="#">1</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link shadow-none" href="#">2</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link shadow-none" href="#">3</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link shadow-none" href="#">Next</a>
-          </li>
-        </ul>
-      </div> -->
-    </section>
-    <!-- PRODUCTS -->
+      <!-- More Details -->
+      <section id="details" class="mt-3">
+        <div class="row about-content">
+          <!-- Tabs -->
+          <div class="col-md-6 col-sm-12">
+            <div class="tab-container">
+              <div class="tab-box">
+                <button class="tab-btn active">Product Details</button>
+                <button class="tab-btn">Contact Us</button>
+                <button class="tab-btn">Reviews</button>
+                <div class="line"></div>
+              </div>
+
+              <div class="content-box">
+                <div class="content active">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Nam aliquam magnam exercitationem dicta voluptatum.
+                    Inventore ad dolores, at sunt placeat voluptatem neque
+                    possimus? Nihil laudantium provident vero veritatis debitis
+                    libero! 123
+                  </p>
+                </div>
+
+                <div class="content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Nam aliquam magnam exercitationem dicta voluptatum.
+                    Inventore ad dolores, at sunt placeat voluptatem neque
+                    possimus? Nihil laudantium provident vero veritatis debitis
+                    libero! 456
+                  </p>
+                </div>
+
+                <div class="content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Nam aliquam magnam exercitationem dicta voluptatum.
+                    Inventore ad dolores, at sunt placeat voluptatem neque
+                    possimus? Nihil laudantium provident vero veritatis debitis
+                    libero! 789
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Items -->
+          <div class="col-md-6 col-sm-12">
+            <h2>Related Products</h2>
+            <div class="related-items">
+              <!-- Item 1 -->
+              <a href="product1.html" class="related-card">
+                <img src="assets/banana-leaf.png" alt="Item 1" />
+                <div class="related-info">
+                  <h5>Savory BBQ Delight</h5>
+                  <p>Tender plant-based ribs glazed in rich smoky sauce.</p>
+                  <span class="price">₱1000</span>
+                </div>
+              </a>
+
+              <!-- Item 2 -->
+              <a href="product2.html" class="related-card">
+                <img src="assets/banana-leaf.png" alt="Item 2" />
+                <div class="related-info">
+                  <h5>Spicy Herb Tenders</h5>
+                  <p>Crispy and bold, with a touch of fiery seasoning.</p>
+                  <span class="price">₱1000</span>
+                </div>
+              </a>
+
+              <!-- Item 3 -->
+              <a href="product3.html" class="related-card">
+                <img src="assets/banana-leaf.png" alt="Item 3" />
+                <div class="related-info">
+                  <h5>Classic Grilled Strips</h5>
+                  <p>Juicy grilled strips packed with flavor and zest.</p>
+                  <span class="price">₱1000</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- PRODUCT DETAILS -->
 
     <!-- FOOTER -->
     <footer>
@@ -592,23 +575,54 @@
       updateCartTotal();
     </script>
 
-    <!-- PRODUCT FILTER FUNCTION -->
+    <!-- CHANGE IMAGE -->
     <script>
-      // Replace dropdown button text when option clicked
-      document
-        .querySelectorAll(".dropdown-menu .dropdown-item")
-        .forEach((item) => {
-          item.addEventListener("click", function (e) {
-            e.preventDefault();
+      function changeImage(element) {
+        let mainImage = document.getElementById("mainImage");
+        mainImage.style.opacity = "0";
+        setTimeout(() => {
+          mainImage.src = element.src;
+          mainImage.style.opacity = "1";
+        }, 300);
+      }
+    </script>
 
-            let dropdown = this.closest(".dropdown");
-            let button = dropdown.querySelector(".dropdown-toggle");
+    <!-- ADD QUANTITY -->
+    <script>
+      function changeQty(value) {
+        let qty = document.getElementById("quantity");
+        let current = parseInt(qty.value);
+        if (current + value >= 1) {
+          qty.value = current + value;
+        }
+      }
+    </script>
 
-            // Update button text with chosen option
-            button.innerHTML =
-              this.textContent + ' <i class="bi bi-chevron-down"></i>';
+    <!-- DETAILS -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Tab Switching Function
+        const tabs = document.querySelectorAll(".tab-btn");
+        const all_content = document.querySelectorAll(".content");
+
+        tabs.forEach((tab, index) => {
+          tab.addEventListener("click", (e) => {
+            tabs.forEach((tab) => tab.classList.remove("active"));
+            tab.classList.add("active");
+
+            var line = document.querySelector(".line");
+            if (line) {
+              line.style.width = e.target.offsetWidth + "px";
+              line.style.left = e.target.offsetLeft + "px";
+            }
+
+            all_content.forEach((content) =>
+              content.classList.remove("active")
+            );
+            all_content[index].classList.add("active");
           });
         });
+      });
     </script>
   </body>
 </html>
