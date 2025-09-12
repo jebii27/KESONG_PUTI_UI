@@ -1,14 +1,15 @@
 :root {
 
     /* General Color */
-    --white: #FFFCF6;
-    --beige: #F5F0E6;
+    --white: #ffffff;
+    --beige: #fefaf6;
     --cream: #FBF1D7;
     --green: #058240;
-    --mint: #87C159;
+    --mint: #94c57b;
     --yellow: #F3C301;
     --light-yellow: #FEE3A2;
     --ashgrey: #ADCACB;
     --black: #0D0E0E;
+    --azure: #24555c;
 
 }

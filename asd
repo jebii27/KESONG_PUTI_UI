@@ -1,436 +1,355 @@
-<!-- FOOTER -->
-<footer>
-  <div class="container footer-container">
-    <!-- <div id="leaves">
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-        </div> -->
-    <div class="row">
-      <!-- Logo & Social -->
-      <div class="col-md-4 col-sm-12 text-center footer-logo">
-        <img src="assets/logo.png" alt="Kesong Puti Logo" />
-        <p class="small mt-2">
-          Kesong Puti is your go-to online shop for fresh, authentic Filipino
-          cottage cheese. We take pride in delivering locally made, high-quality
-          products straight to your doorstep, preserving the rich tradition of
-          our hometown delicacy.
-        </p>
-        <div class="social-icons">
-          <div class="social-circle facebook">
-            <i class="bi bi-facebook"></i>
-          </div>
-          <div class="social-circle instagram">
-            <i class="bi bi-instagram"></i>
-          </div>
-        </div>
-      </div>
+< !-- FOOTER --><footer><div class="container footer-container">< !-- <div id="leaves"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>--><div class="row">< !-- Logo & Social --><div class="col-md-4 col-sm-12 text-center footer-logo"><img src="assets/logo.png" alt="Kesong Puti Logo" /><p class="small mt-2">Kesong Puti is your go-to online shop for fresh,
+authentic Filipino cottage cheese. We take pride in delivering locally made,
+high-quality products straight to your doorstep,
+preserving the rich tradition of our hometown delicacy. </p><div class="social-icons"><div class="social-circle facebook"><i class="bi bi-facebook"></i></div><div class="social-circle instagram"><i class="bi bi-instagram"></i></div></div></div><div class="col-md-4 col-sm-12"><div class="footer-links"><h6 class="footer-title">Quick Links</h6><a href="#">Home</a><a href="#">Products</a><a href="#">About Us</a><a href="#">Contact Us</a><a href="#">Feedback</a></div><div class="contact-info mt-4"><h6 class="footer-title mt-3">Contact Information</h6><p><i class="bi bi-envelope"></i>info@kesongputi.com</p><p><i class="bi bi-telephone"></i>+63 912 345 6789</p><p><i class="bi bi-geo-alt"></i>123 Kesong St., Laguna, Philippines </p></div></div><div class="col-md-4 contact-form"><h5 class="fw-bold mb-3">Contact Us</h5><p class="small">We’d love to hear from you ! Send us a message—we’ll get back to you as soon as we can ! </p><form><input type="text" class="form-control" placeholder="Name" /><input type="email" class="form-control" placeholder="Email" /><input type="text"
+class="form-control"
+placeholder="Contact Number"
+/><textarea class="form-control"
+rows="3"
+placeholder="Message"
+></textarea><button type="submit" class="submit-btn mt-2">Submit</button></form></div></div>< !-- Bottom --><div class="footer-bottom">Kesong Puti © 2025 All Rights Reserved</div></div></footer>< !-- FOOTER --><style>@import url("colors.css");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lilita+One&family=Londrina+Solid:wght@100;300;400;900&display=swap");
 
-      <div class="col-md-4 col-sm-12">
-        <div class="footer-links">
-          <h6 class="footer-title">Quick Links</h6>
-          <a href="#">Home</a>
-          <a href="#">Products</a>
-          <a href="#">About Us</a>
-          <a href="#">Contact Us</a>
-          <a href="#">Feedback</a>
-        </div>
-        <div class="contact-info mt-4">
-          <h6 class="footer-title mt-3">Contact Information</h6>
-          <p><i class="bi bi-envelope"></i> info@kesongputi.com</p>
-          <p><i class="bi bi-telephone"></i> +63 912 345 6789</p>
-          <p>
-            <i class="bi bi-geo-alt"></i> 123 Kesong St., Laguna, Philippines
-          </p>
-        </div>
-      </div>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fredoka", sans-serif;
+}
 
-      <div class="col-md-4 contact-form">
-        <h5 class="fw-bold mb-3">Contact Us</h5>
-        <p class="small">
-          We’d love to hear from you! Send us a message—we’ll get back to you as
-          soon as we can!
-        </p>
-        <form>
-          <input type="text" class="form-control" placeholder="Name" />
-          <input type="email" class="form-control" placeholder="Email" />
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Contact Number"
-          />
-          <textarea
-            class="form-control"
-            rows="3"
-            placeholder="Message"
-          ></textarea>
-          <button type="submit" class="submit-btn mt-2">Submit</button>
-        </form>
-      </div>
-    </div>
+body {
+  background-color: var(--beige);
+}
 
-    <!-- Bottom -->
-    <div class="footer-bottom">Kesong Puti © 2025 All Rights Reserved</div>
-  </div>
-</footer>
-<!-- FOOTER -->
+/* NAVBAR */
+.navbar {
+  padding: 10px 30px;
+  transition: all 0.5s ease;
+}
 
-<style>
-  @import url("colors.css");
-  @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lilita+One&family=Londrina+Solid:wght@100;300;400;900&display=swap");
+.navbar-brand img {
+  height: 80px;
+  width: auto;
+  border-radius: 50%;
+}
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Fredoka", sans-serif;
-  }
+.navbar .nav-item {
+  font-size: 20px;
+  font-weight: bold;
+}
 
-  body {
-    background-color: var(--beige);
-  }
+.navbar .nav-link {
+  color: var(--white);
+}
 
-  /* NAVBAR */
-  .navbar {
-    padding: 10px 30px;
-    transition: all 0.5s ease;
-  }
+.cart-icon {
+  color: var(--white);
+}
 
-  .navbar-brand img {
-    height: 80px;
-    width: auto;
-    border-radius: 50%;
-  }
+.navbar-nav {
+  gap: 50px;
+}
 
-  .navbar .nav-item {
-    font-size: 20px;
-    font-weight: bold;
-  }
+.navbar-transparent {
+  background: transparent;
+}
 
-  .navbar .nav-link {
-    color: var(--white);
-  }
+.navbar-scrolled {
+  background: var(--bg-white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-  .cart-icon {
-    color: var(--white);
-  }
+.navbar-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
+}
 
-  .navbar-nav {
-    gap: 50px;
-  }
+.navbar-visible {
+  transform: translateY(0);
+  transition: transform 0.5s ease;
+}
 
-  .navbar-transparent {
-    background: transparent;
-  }
+.cart-badge {
+  font-size: 11px;
+  background: rgb(219, 41, 41);
+  color: white;
+  border-radius: 51%;
+  padding: 1px 6px;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+}
 
-  .navbar-scrolled {
-    background: var(--bg-white);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
+/* Sidebar Cart */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+  transition: right 0.3s ease;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+}
 
-  .navbar-hidden {
-    transform: translateY(-100%);
-    transition: transform 0.5s ease;
-  }
+.cart-sidebar.active {
+  right: 0;
+}
 
-  .navbar-visible {
-    transform: translateY(0);
-    transition: transform 0.5s ease;
-  }
+.cart-header {
+  background: #f8f9fa;
+}
 
-  .cart-badge {
-    font-size: 11px;
-    background: rgb(219, 41, 41);
-    color: white;
-    border-radius: 51%;
-    padding: 1px 6px;
-    position: absolute;
-    top: -8px;
-    right: -10px;
-  }
+.cart-body {
+  flex: 1;
+  overflow-y: auto;
+}
 
-  /* Sidebar Cart */
-  .cart-sidebar {
-    position: fixed;
-    top: 0;
-    right: -400px;
-    width: 350px;
-    height: 100%;
-    background: #fff;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
-    transition: right 0.3s ease;
-    z-index: 1050;
-    display: flex;
-    flex-direction: column;
-  }
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-  .cart-sidebar.active {
-    right: 0;
-  }
+.cart-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
-  .cart-header {
-    background: #f8f9fa;
-  }
+.btn-qty {
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+  border-radius: 5px;
+  padding: 2px 8px;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1;
+}
 
-  .cart-body {
-    flex: 1;
-    overflow-y: auto;
-  }
+.btn-qty:hover {
+  background: #e9ecef;
+}
 
-  .cart-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+.cart-branch {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--green);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 400;
+}
 
-  .cart-img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
+.btn-delete {
+  background: none;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+  font-size: 18px;
+}
 
-  .btn-qty {
-    border: 1px solid #ccc;
-    background: #f8f8f8;
-    border-radius: 5px;
-    padding: 2px 8px;
-    cursor: pointer;
-    font-weight: bold;
-    line-height: 1;
-  }
+.cart-footer {
+  background: #f8f9fa;
+}
 
-  .btn-qty:hover {
-    background: #e9ecef;
-  }
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1040;
+}
 
-  .cart-branch {
-    display: inline-block;
-    margin-top: 4px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #fff;
-    background-color: var(--green);
-    padding: 2px 8px;
-    border-radius: 12px;
-    font-weight: 400;
-  }
+.overlay.active {
+  display: block;
+}
 
-  .btn-delete {
-    background: none;
-    border: none;
-    color: #dc3545;
-    cursor: pointer;
-    font-size: 18px;
-  }
+/* NAVBAR */
 
-  .cart-footer {
-    background: #f8f9fa;
-  }
+/* PRODUCTS PAGE */
 
-  /* Overlay */
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
-    z-index: 1040;
-  }
+/* header */
+.product-page {
+  height: 40vh;
+  background-image: url(/assets/leaf.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
 
-  .overlay.active {
-    display: block;
-  }
+.product-page h1 {
+  font-size: 4rem;
+  font-family: "Lilita One", sans-serif;
+}
 
-  /* NAVBAR */
+/* header */
 
-  /* PRODUCTS PAGE */
+/* product section */
+.product-section {
+  min-height: 100vh;
+  background-color: var(--light-yellow);
+}
 
-  /* header */
-  .product-page {
-    height: 40vh;
-    background-image: url(/assets/leaf.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-  }
+/* filter */
+.filter-bar {
+  padding: 12px 25px;
+  border-bottom: 3px solid var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  .product-page h1 {
-    font-size: 4rem;
-    font-family: "Lilita One", sans-serif;
-  }
+.filter-label {
+  font-weight: bold;
+  margin-right: 15px;
+  font-size: 0.95rem;
+  color: var(--black);
+}
 
-  /* header */
+.filter-options {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
 
-  /* product section */
-  .product-section {
-    min-height: 100vh;
-    background-color: var(--light-yellow);
-  }
+.dropdown-toggle {
+  border: none;
+  background: transparent;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 
-  /* filter */
-  .filter-bar {
-    padding: 12px 25px;
-    border-bottom: 3px solid var(--green);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.dropdown-toggle::after {
+  display: none;
+}
 
-  .filter-label {
-    font-weight: bold;
-    margin-right: 15px;
-    font-size: 0.95rem;
-    color: var(--black);
-  }
+.dropdown-menu {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
 
-  .filter-options {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-  }
+.dropdown-item {
+  font-size: 0.9rem;
+  padding: 8px 15px;
+  cursor: pointer;
+}
 
-  .dropdown-toggle {
-    border: none;
-    background: transparent;
-    font-weight: 500;
-    font-size: 0.95rem;
-    color: #000;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
 
-  .dropdown-toggle::after {
-    display: none;
-  }
+.product-count {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
 
-  .dropdown-menu {
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  }
+/* products */
+.product-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-  .dropdown-item {
-    font-size: 0.9rem;
-    padding: 8px 15px;
-    cursor: pointer;
-  }
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
 
-  .dropdown-item:hover {
-    background-color: #f0f0f0;
-  }
+.product-card .card-body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
 
-  .product-count {
-    font-weight: bold;
-    font-size: 0.95rem;
-  }
+.product-price {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--green);
+}
 
-  /* products */
-  .product-card {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
+.btn-view {
+  width: 50%;
+  border-radius: 20px;
+  padding: 5px 20px;
+  background-color: var(--btn-mint);
+  border: none;
+  font-weight: 600;
+}
 
-  .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-  }
+.btn-view:hover {
+  transform: scale(1.05);
+}
 
-  .product-card .card-body {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
+.btn-add-to-cart {
+  width: 50%;
+  border-radius: 20px;
+  padding: 5px 20px;
+  background-color: var(--btn-yellow);
+  border: none;
+  font-weight: 600;
+}
 
-  .product-price {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: var(--green);
-  }
+.btn-add-to-cart:hover {
+  transform: scale(1.05);
+}
 
-  .btn-view {
-    width: 50%;
-    border-radius: 20px;
-    padding: 5px 20px;
-    background-color: var(--btn-mint);
-    border: none;
-    font-weight: 600;
-  }
+.pagination {
+  justify-content: center;
+  margin-top: 30px;
+}
 
-  .btn-view:hover {
-    transform: scale(1.05);
-  }
+.pagination .page-link {
+  color: var(--black);
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 8px 14px;
+  transition: all 0.2s ease-in-out;
+  background-color: transparent;
+}
 
-  .btn-add-to-cart {
-    width: 50%;
-    border-radius: 20px;
-    padding: 5px 20px;
-    background-color: var(--btn-yellow);
-    border: none;
-    font-weight: 600;
-  }
+.pagination .page-item.active .page-link {
+  background-color: var(--yellow);
+  color: var(--black);
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
 
-  .btn-add-to-cart:hover {
-    transform: scale(1.05);
-  }
+.pagination .page-link:hover {
+  background-color: var(--yellow);
+  color: var(--black);
+}
 
-  .pagination {
-    justify-content: center;
-    margin-top: 30px;
-  }
+.pagination .page-item.disabled .page-link {
+  color: #aaa;
+  background-color: transparent;
+}
 
-  .pagination .page-link {
-    color: var(--black);
-    border: none;
-    font-weight: bold;
-    border-radius: 8px;
-    padding: 8px 14px;
-    transition: all 0.2s ease-in-out;
-    background-color: transparent;
-  }
+/* PRODUCTS PAGE */
 
-  .pagination .page-item.active .page-link {
-    background-color: var(--yellow);
-    color: var(--black);
-    border: none;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  }
-
-  .pagination .page-link:hover {
-    background-color: var(--yellow);
-    color: var(--black);
-  }
-
-  .pagination .page-item.disabled .page-link {
-    color: #aaa;
-    background-color: transparent;
-  }
-
-  /* PRODUCTS PAGE */
-
-  /* #leaves {
+/* #leaves {
     position: relative;
     top: -50px;
     width: 100%;
@@ -677,4 +596,82 @@
         opacity: 0;
     }
 } */
+</style><section class="content">Above Section</section><svg class="leaf-braid-separator" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>< !-- Base leaf shape --><path id="leafShape" d="M0,0 C40,-40 100,-40 140,0 C100,40 40,40 0,0 Z"
+
+fill="#3a9d41" stroke="#246b29" stroke-width="2" /></defs>< !-- Repeated leaves to form braid --><g><use href="#leafShape" x="50" y="100" transform="rotate(-10 50 100)" class="sway" /><use href="#leafShape" x="150" y="100" transform="rotate(10 150 100)" class="sway" /><use href="#leafShape" x="250" y="100" transform="rotate(-10 250 100)" class="sway" /><use href="#leafShape" x="350" y="100" transform="rotate(10 350 100)" class="sway" /><use href="#leafShape" x="450" y="100" transform="rotate(-10 450 100)" class="sway" /><use href="#leafShape" x="550" y="100" transform="rotate(10 550 100)" class="sway" /><use href="#leafShape" x="650" y="100" transform="rotate(-10 650 100)" class="sway" /><use href="#leafShape" x="750" y="100" transform="rotate(10 750 100)" class="sway" /><use href="#leafShape" x="850" y="100" transform="rotate(-10 850 100)" class="sway" /><use href="#leafShape" x="950" y="100" transform="rotate(10 950 100)" class="sway" /><use href="#leafShape" x="1050" y="100" transform="rotate(-10 1050 100)" class="sway" /></g></svg><section class="content">Below Section</section><style>.content {
+  padding: 3rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.leaf-braid-separator {
+  display: block;
+  width: 100%;
+  height: 150px;
+  margin: 0;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+}
+
+/* 🌿 Gentle swaying effect */
+.sway {
+  transform-origin: center bottom;
+  animation: swayAnim 5s ease-in-out infinite;
+}
+
+.sway:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+
+.sway:nth-of-type(3) {
+  animation-delay: 1s;
+}
+
+.sway:nth-of-type(4) {
+  animation-delay: 1.5s;
+}
+
+.sway:nth-of-type(5) {
+  animation-delay: 2s;
+}
+
+.sway:nth-of-type(6) {
+  animation-delay: 2.5s;
+}
+
+.sway:nth-of-type(7) {
+  animation-delay: 3s;
+}
+
+.sway:nth-of-type(8) {
+  animation-delay: 3.5s;
+}
+
+.sway:nth-of-type(9) {
+  animation-delay: 4s;
+}
+
+.sway:nth-of-type(10) {
+  animation-delay: 4.5s;
+}
+
+.sway:nth-of-type(11) {
+  animation-delay: 5s;
+}
+
+@keyframes swayAnim {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-4deg);
+  }
+
+  75% {
+    transform: rotate(4deg);
+  }
+}
+
 </style>
