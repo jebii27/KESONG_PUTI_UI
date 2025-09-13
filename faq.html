@@ -23,12 +23,11 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
 
-  <body style="background-color: var(--white)">
+  <body style="background-color: var(--beige)">
     <!-- NAVBAR -->
     <nav
       class="navbar navbar-expand-lg fixed-top navbar-transparent navbar-hidden navbar-visible"
       id="mainNavbar"
-      style="background-color: var(--white)"
     >
       <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="#"
@@ -54,7 +53,7 @@
               <a class="nav-link" href="#">Contact Us</a>
             </li>
             <li class="nav-item"><a class="nav-link" href="#">Feedback</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Order Now</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
           </ul>
         </div>
 
@@ -74,81 +73,75 @@
 
     <!-- CART SIDEBAR -->
     <div class="cart-sidebar" id="cartSidebar">
-      <div
-        class="cart-header d-flex justify-content-between align-items-center p-3 border-bottom"
-      >
-        <h5 class="mb-0">My Cart</h5>
-        <button class="btn btn-md" id="closeCart">
+      <!-- header -->
+      <div class="cart-header">
+        <h5><i class="bi bi-bag me-2"></i> Your Bag</h5>
+        <button class="close-btn" id="closeCart">
           <i class="bi bi-x-lg"></i>
         </button>
       </div>
 
-      <div class="cart-body p-3" id="cartItems">
-        <!-- Select All -->
-        <div class="d-flex align-items-center mb-2">
-          <input type="checkbox" id="selectAll" class="me-2" />
-          <label for="selectAll" class="mb-0 fw-bold">Select All</label>
+      <!-- Body -->
+      <div class="cart-body" id="cartItems">
+        <!-- checkbox -->
+        <div class="select-all">
+          <input type="checkbox" id="selectAll" />
+          <label for="selectAll">Select All</label>
         </div>
 
-        <!-- Example Cart Item -->
-        <div class="cart-item d-flex align-items-center border-bottom py-2">
-          <input type="checkbox" class="cart-check me-2" checked />
-          <img
-            src="assets/kesong puti.png"
-            alt="Product"
-            class="cart-img me-2"
-          />
-          <div class="flex-grow-1">
-            <h6 class="mb-1">Kesong Puti Classic</h6>
-            <div class="d-flex align-items-center">
+        <!-- items -->
+        <div class="cart-item">
+          <input type="checkbox" class="cart-check" checked />
+          <img src="assets/kesong puti.png" alt="Product" class="cart-img" />
+          <div class="item-info">
+            <h6>Kesong Puti Classic</h6>
+            <div class="qty-controls">
               <button class="btn-qty minus">−</button>
-              <span class="qty mx-2">1</span>
+              <span class="qty">1</span>
               <button class="btn-qty plus">+</button>
             </div>
-            <strong class="item-price d-block mt-1" data-price="25">₱25</strong>
+            <strong class="item-price" data-price="25">₱25</strong>
             <span class="cart-branch">Branch 1</span>
           </div>
-          <button class="btn-delete"><i class="bi bi-trash"></i></button>
+          <button class="btn-delete">
+            <i class="bi bi-trash"></i>
+          </button>
         </div>
 
-        <div class="cart-item d-flex align-items-center border-bottom py-2">
-          <input type="checkbox" class="cart-check me-2" checked />
-          <img
-            src="assets/kesong puti.png"
-            alt="Product"
-            class="cart-img me-2"
-          />
-          <div class="flex-grow-1">
-            <h6 class="mb-1">Kesong Puti Premium</h6>
-            <div class="d-flex align-items-center">
+        <div class="cart-item">
+          <input type="checkbox" class="cart-check" checked />
+          <img src="assets/kesong puti.png" alt="Product" class="cart-img" />
+          <div class="item-info">
+            <h6>Kesong Puti Premium</h6>
+            <div class="qty-controls">
               <button class="btn-qty minus">−</button>
-              <span class="qty mx-2">2</span>
+              <span class="qty">2</span>
               <button class="btn-qty plus">+</button>
             </div>
-            <strong class="item-price d-block mt-1" data-price="40">₱40</strong>
+            <strong class="item-price" data-price="40">₱40</strong>
           </div>
-          <button class="btn-delete"><i class="bi bi-trash"></i></button>
+          <button class="btn-delete">
+            <i class="bi bi-trash"></i>
+          </button>
         </div>
       </div>
 
-      <!-- Footer -->
-      <div class="cart-footer p-3 border-top">
-        <div class="d-flex justify-content-between mb-2">
-          <strong>Total:</strong>
-          <span id="cartTotal">₱65</span>
+      <!-- footer -->
+      <div class="cart-footer">
+        <div class="total">
+          <span>Total:</span>
+          <strong id="cartTotal">₱65</strong>
         </div>
-        <button class="btn btn-dark w-100">Checkout</button>
+        <button class="checkout-btn">Checkout</button>
       </div>
     </div>
+
+    <div class="overlay" id="overlay"></div>
     <!-- CART SIDEBAR -->
 
-    <!-- CART OVERLAY -->
-    <div class="overlay" id="overlay"></div>
-    <!-- CART OVERLAY -->
-
-    <!-- PRODUCTS PAGE HEADER -->
-    <section class="product-page">
-      <div class="header-text">
+    <!-- PAGE HEADER -->
+    <section class="faq-header-section">
+      <div class="faq-header-text">
         <h1>FAQ</h1>
         <div class="breadcrumb">
           <a href="index.html"><span>Home</span> </a>
@@ -157,183 +150,158 @@
         </div>
       </div>
     </section>
-    <!-- PRODUCTS PAGE HEADER -->
+    <!-- PAGE HEADER -->
 
     <!-- FAQ -->
     <section id="faq">
-      <div class="row container-fluid">
-        <div class="col-lg-6 col-md-6 col-sm-12">
-          <div class="faq-text mt-5">
-            <h1>Frequently Asked Questions</h1>
-            <h5 class="mb-4">How can we help?</h5>
-          </div>
+      <div class="container faq-container">
+        <h1 class="mt-5 text-center">Frequently Asked Questions</h1>
+        <h4 class="mb-5 text-center">How can we help?</h4>
 
-          <div class="faq-box">
-            <div class="accordion" id="faqAccordion">
-              <!-- FAQ 1 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed shadow-none"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq1"
-                  >
-                    Lorem Ipsum 1
-                  </button>
-                </h2>
-                <div
-                  id="faq1"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
+        <div class="faq-box">
+          <div class="accordion" id="faqAccordion">
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq1"
                 >
-                  <div class="accordion-body">
-                    This is the answer for FAQ 1.
-                  </div>
-                </div>
-              </div>
-
-              <!-- FAQ 2 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed shadow-none"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq2"
-                  >
-                    Lorem Ipsum 2
-                  </button>
-                </h2>
-                <div
-                  id="faq2"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div class="accordion-body">
-                    This is the answer for FAQ 2.
-                  </div>
-                </div>
-              </div>
-
-              <!-- FAQ 3 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed shadow-none"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq3"
-                  >
-                    Lorem Ipsum 3
-                  </button>
-                </h2>
-                <div
-                  id="faq3"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div class="accordion-body">
-                    This is the answer for FAQ 3.
-                  </div>
-                </div>
-              </div>
-
-              <!-- FAQ 4 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed shadow-none"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq4"
-                  >
-                    Lorem Ipsum 4
-                  </button>
-                </h2>
-                <div
-                  id="faq4"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div class="accordion-body">
-                    This is the answer for FAQ 4.
-                  </div>
-                </div>
-              </div>
-
-              <!-- FAQ 5 -->
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed shadow-none"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq5"
-                  >
-                    Lorem Ipsum 5
-                  </button>
-                </h2>
-                <div
-                  id="faq5"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div class="accordion-body">
-                    This is the answer for FAQ 5.
-                  </div>
-                </div>
+                  Lorem Ipsum 1
+                </button>
+              </h2>
+              <div
+                id="faq1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">This is the answer for FAQ 1.</div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
-          <div class="faq-image">
-            <img src="assets/faq.png" alt="FAQ Image" class="img-fluid" />
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq2"
+                >
+                  Lorem Ipsum 2
+                </button>
+              </h2>
+              <div
+                id="faq2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">This is the answer for FAQ 2.</div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq3"
+                >
+                  Lorem Ipsum 3
+                </button>
+              </h2>
+              <div
+                id="faq3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">This is the answer for FAQ 3.</div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq4"
+                >
+                  Lorem Ipsum 4
+                </button>
+              </h2>
+              <div
+                id="faq4"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">This is the answer for FAQ 4.</div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed shadow-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq5"
+                >
+                  Lorem Ipsum 5
+                </button>
+              </h2>
+              <div
+                id="faq5"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">This is the answer for FAQ 5.</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- FAQ -->
 
+    <!-- SEPARATOR -->
+    <section class="footer-separator"></section>
+    <!-- SEPARATOR -->
+
     <!-- FOOTER -->
     <footer>
       <div class="container footer-container">
         <div class="row">
-          <!-- contact us form -->
-          <div class="col-md-3 col-sm-12 contact-form">
-            <h5 class="footer-title">Leave A Message</h5>
-            <p class="small">
-              We’d love to hear from you! Send us a message—we’ll get back to
-              you as soon as we can!
+          <div class="col-md-3 col-sm-12 text-center footer-logo">
+            <img src="assets/logo.png" alt="Kesong Puti Logo" />
+            <p class="small mt-2">
+              Kesong Puti is your go-to online shop for fresh, authentic
+              Filipino cottage cheese. We take pride in delivering locally made,
+              high-quality products straight to your doorstep, preserving the
+              rich tradition of our hometown delicacy.
             </p>
-            <form>
-              <input type="text" class="form-control" placeholder="Name" />
-              <input type="email" class="form-control" placeholder="Email" />
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Contact Number"
-              />
-              <textarea
-                class="form-control"
-                rows="3"
-                placeholder="Message"
-              ></textarea>
-              <button type="submit" class="submit-btn mt-2">Submit</button>
-            </form>
           </div>
 
-          <!-- contact information -->
+          <!-- quick links -->
           <div class="col-md-3 col-sm-12">
-            <div class="contact-info">
-              <h6 class="footer-title">Contact Information</h6>
-              <p><i class="bi bi-envelope"></i> info@kesongputi.com</p>
-              <p><i class="bi bi-telephone"></i> +63 912 345 6789</p>
-              <p>
-                <i class="bi bi-geo-alt"></i> 123 Kesong St., Laguna,
-                Philippines
-              </p>
+            <div class="footer-links">
+              <h6 class="footer-title">Quick Links</h6>
+              <a href="#">Home</a>
+              <a href="#">Products</a>
+              <a href="#">About Us</a>
+              <a href="#">Feedback</a>
+            </div>
+            <div class="footer-links mt-5">
+              <h6 class="footer-title">Need Assistance?</h6>
+              <a href="#">Contact Us</a>
+              <a href="#">FAQ</a>
+              <a href="#">Privacy Policy</a>
             </div>
           </div>
 
@@ -351,21 +319,45 @@
             </div>
           </div>
 
-          <!-- quick links -->
-          <div class="col-md-3 col-sm-12">
-            <div class="footer-links">
-              <h6 class="footer-title">Quick Links</h6>
-              <a href="#">Home</a>
-              <a href="#">Products</a>
-              <a href="#">About Us</a>
-              <a href="#">Contact Us</a>
-              <a href="#">Feedback</a>
-            </div>
+          <!-- contact us form -->
+          <div class="col-md-3 col-sm-12 contact-form">
+            <h5 class="footer-title">Leave A Message</h5>
+            <p class="small">
+              We’d love to hear from you! Send us a message—we’ll get back to
+              you as soon as we can!
+            </p>
+            <form>
+              <input type="text" class="form-control" placeholder="Name" />
+              <input type="email" class="form-control" placeholder="Email" />
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Contact Number"
+              />
+
+              <select class="form-control">
+                <option value="" disabled selected>Select Branch</option>
+                <option value="branch1">Branch 1 - Manila</option>
+                <option value="branch2">Branch 2 - Quezon City</option>
+                <option value="branch3">Branch 3 - Cebu</option>
+                <option value="branch4">Branch 4 - Davao</option>
+              </select>
+
+              <textarea
+                class="form-control"
+                rows="3"
+                placeholder="Message"
+              ></textarea>
+              <button type="submit" class="submit-btn mt-2">Submit</button>
+            </form>
           </div>
         </div>
+      </div>
 
-        <!-- Bottom -->
-        <div class="footer-bottom">Kesong Puti © 2025 All Rights Reserved</div>
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <p>Kesong Puti © 2025 All Rights Reserved</p>
+        <a href="#">Terms and Condition</a>
       </div>
     </footer>
     <!-- FOOTER -->
@@ -381,7 +373,7 @@
     <script>
       (function () {
         const navbar = document.getElementById("mainNavbar");
-        const hero = document.querySelector(".product-page");
+        const hero = document.querySelector(".faq-header-section");
 
         function setTopState() {
           // At the very top: transparent + visible
