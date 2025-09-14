@@ -25,11 +25,12 @@
 
   <body style="background-color: var(--beige)">
     <div class="checkout-wrapper">
-      <!-- Left Section: Form -->
+      <!-- forms -->
       <div class="checkout-form">
         <h2>Checkout</h2>
 
-        <!-- Personal Info -->
+        <!-- personal info -->
+        <h3>Personal Information</h3>
         <div class="row checkout-row">
           <div class="field">
             <label for="fname">First Name</label>
@@ -47,7 +48,7 @@
         <label for="phone">Phone</label>
         <input type="text" id="phone" placeholder="09XXXXXXXXX" />
 
-        <!-- Delivery or Pickup -->
+        <!-- delivery or pickup -->
         <h3>Select Method</h3>
         <div class="options">
           <input
@@ -63,7 +64,7 @@
           <label class="option-card" for="pickup">Pickup</label>
         </div>
 
-        <!-- Delivery Section -->
+        <!-- if delivery -->
         <div id="address-section" class="extra-form" style="display: block">
           <div class="row checkout-row">
             <div class="field">
@@ -103,7 +104,7 @@
           </div>
         </div>
 
-        <!-- Pickup Section -->
+        <!-- if pickup -->
         <div id="pickup-section" class="extra-form">
           <label for="pickup-date">Pickup Date</label>
           <input type="date" id="pickup-date" />
@@ -132,11 +133,17 @@
           <img src="assets/qr.jpg" alt="GCash QR Code" class="qr" />
 
           <div class="proof-upload">
-            <label for="gcash-proof"
-              >Upload Proof of Payment (screenshot)</label
+            <label for="gcash-proof">Upload Proof of Payment:</label>
+            <div
+              class="upload-box"
+              onclick="document.getElementById('gcash-proof').click();"
             >
+              <p class="upload-text">
+                Click or drag & drop your screenshot here
+              </p>
+              <img id="gcash-preview" alt="GCash Proof Preview" />
+            </div>
             <input type="file" id="gcash-proof" accept="image/*" />
-            <img id="gcash-preview" class="preview" alt="GCash Proof Preview" />
           </div>
         </div>
 
@@ -147,9 +154,17 @@
           <p><strong>Account Number:</strong> 1234-5678-90</p>
 
           <div class="proof-upload">
-            <label for="bank-proof">Upload Proof of Payment (screenshot)</label>
-            <input type="file" id="bank-proof" accept="image/*" />
-            <img id="bank-preview" class="preview" alt="Bank Proof Preview" />
+            <label for="gcash-proof">Upload Proof of Payment:</label>
+            <div
+              class="upload-box"
+              onclick="document.getElementById('gcash-proof').click();"
+            >
+              <p class="upload-text">
+                Click or drag & drop your screenshot here
+              </p>
+              <img id="gcash-preview" alt="GCash Proof Preview" />
+            </div>
+            <input type="file" id="gcash-proof" accept="image/*" />
           </div>
         </div>
       </div>
@@ -218,11 +233,15 @@
       function previewFile(input, previewId) {
         const file = input.files[0];
         const preview = document.getElementById(previewId);
+        const uploadBox = preview.closest(".upload-box");
+        const uploadText = uploadBox.querySelector(".upload-text");
+
         if (file) {
           const reader = new FileReader();
           reader.onload = (e) => {
             preview.src = e.target.result;
             preview.style.display = "block";
+            uploadText.style.display = "none"; // hide text when image is shown
           };
           reader.readAsDataURL(file);
         }

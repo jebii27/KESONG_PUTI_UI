@@ -1210,4 +1210,38 @@ h4 {
     color: var(--white);
 }
 
+
+/* preview */
+.upload-box {
+    border: 2px dashed var(--mint);
+    border-radius: 10px;
+    background: var(--cream);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-box p {
+    margin: 0;
+    color: var(--black);
+    font-size: 0.95rem;
+}
+
+.upload-box img {
+    display: none;
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.proof-upload input[type="file"] {
+    display: none;
+}
+
+
+
 /* CHECKOUT */
