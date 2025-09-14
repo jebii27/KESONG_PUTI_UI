@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kesong Puti - Check Out</title>
+
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <!-- ICONS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+
+  <body style="background-color: var(--beige)">
+    <div class="checkout-wrapper">
+      <!-- Left Section: Form -->
+      <div class="checkout-form">
+        <h2>Checkout</h2>
+
+        <!-- Personal Info -->
+        <div class="row checkout-row">
+          <div class="field">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="Enter your first name" />
+          </div>
+          <div class="field">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Enter your last name" />
+          </div>
+        </div>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" />
+
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" placeholder="09XXXXXXXXX" />
+
+        <!-- Delivery or Pickup -->
+        <h3>Select Method</h3>
+        <div class="options">
+          <input
+            type="radio"
+            id="delivery"
+            name="method"
+            value="delivery"
+            checked
+          />
+          <label class="option-card" for="delivery">Delivery</label>
+
+          <input type="radio" id="pickup" name="method" value="pickup" />
+          <label class="option-card" for="pickup">Pickup</label>
+        </div>
+
+        <!-- Delivery Section -->
+        <div id="address-section" class="extra-form" style="display: block">
+          <div class="row checkout-row">
+            <div class="field">
+              <label for="house">House/Lot/Unit No.</label>
+              <input type="text" id="house" placeholder="e.g. Unit 5A" />
+            </div>
+            <div class="field">
+              <label for="street">Street Name</label>
+              <input type="text" id="street" placeholder="e.g. Mabini St." />
+            </div>
+          </div>
+
+          <div class="row checkout-row">
+            <div class="field">
+              <label for="barangay">Barangay</label>
+              <input
+                type="text"
+                id="barangay"
+                placeholder="e.g. Barangay 123"
+              />
+            </div>
+            <div class="field">
+              <label for="city">City</label>
+              <input type="text" id="city" placeholder="e.g. Quezon City" />
+            </div>
+          </div>
+
+          <div class="row checkout-row">
+            <div class="field">
+              <label for="province">Province</label>
+              <input type="text" id="province" placeholder="e.g. Laguna" />
+            </div>
+            <div class="field">
+              <label for="zip">Zip Code</label>
+              <input type="text" id="zip" placeholder="e.g. 1008" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Pickup Section -->
+        <div id="pickup-section" class="extra-form">
+          <label for="pickup-date">Pickup Date</label>
+          <input type="date" id="pickup-date" />
+
+          <label for="pickup-time">Pickup Time</label>
+          <input type="time" id="pickup-time" />
+        </div>
+
+        <!-- payment options -->
+        <h3>Payment Method</h3>
+        <div class="options">
+          <input type="radio" id="gcash" name="payment" value="gcash" />
+          <label class="option-card" for="gcash">GCash</label>
+
+          <input type="radio" id="bank" name="payment" value="bank" />
+          <label class="option-card" for="bank">Bank Transfer</label>
+
+          <input type="radio" id="cash" name="payment" value="cash" checked />
+          <label class="option-card" for="cash">Cash</label>
+        </div>
+
+        <!-- gcash -->
+        <div id="gcash-form" class="extra-form">
+          <p><strong>GCash Name:</strong> Juan Dela Cruz</p>
+          <p><strong>GCash Number:</strong> 0917-123-4567</p>
+          <img src="assets/qr.jpg" alt="GCash QR Code" class="qr" />
+
+          <div class="proof-upload">
+            <label for="gcash-proof"
+              >Upload Proof of Payment (screenshot)</label
+            >
+            <input type="file" id="gcash-proof" accept="image/*" />
+            <img id="gcash-preview" class="preview" alt="GCash Proof Preview" />
+          </div>
+        </div>
+
+        <!-- bank transfer -->
+        <div id="bank-form" class="extra-form">
+          <p><strong>Bank:</strong> BDO</p>
+          <p><strong>Account Name:</strong> Juan Dela Cruz</p>
+          <p><strong>Account Number:</strong> 1234-5678-90</p>
+
+          <div class="proof-upload">
+            <label for="bank-proof">Upload Proof of Payment (screenshot)</label>
+            <input type="file" id="bank-proof" accept="image/*" />
+            <img id="bank-preview" class="preview" alt="Bank Proof Preview" />
+          </div>
+        </div>
+      </div>
+
+      <!-- order summary -->
+      <div class="order-summary">
+        <h2>Order Summary</h2>
+        <div class="summary-item">
+          <span>Kesong Puti x2</span>
+          <span>₱300</span>
+        </div>
+        <div class="summary-item">
+          <span>Delivery Fee</span>
+          <span>₱50</span>
+        </div>
+        <div class="total mb-3">
+          <span>Total</span>
+          <span>₱350</span>
+        </div>
+
+        <button type="submit" class="checkout-btn">Place Order</button>
+      </div>
+    </div>
+
+    <!-- BOOTSTRAP JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CHECKOUT -->
+    <script>
+      // Toggle delivery vs pickup
+      const delivery = document.getElementById("delivery");
+      const pickup = document.getElementById("pickup");
+      const addressSection = document.getElementById("address-section");
+      const pickupSection = document.getElementById("pickup-section");
+
+      delivery.addEventListener("change", () => {
+        addressSection.style.display = "block";
+        pickupSection.style.display = "none";
+      });
+      pickup.addEventListener("change", () => {
+        addressSection.style.display = "none";
+        pickupSection.style.display = "block";
+      });
+
+      // Toggle payment forms
+      const paymentRadios = document.querySelectorAll('input[name="payment"]');
+      const gcashForm = document.getElementById("gcash-form");
+      const bankForm = document.getElementById("bank-form");
+
+      paymentRadios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+          gcashForm.style.display = document.getElementById("gcash").checked
+            ? "block"
+            : "none";
+          bankForm.style.display = document.getElementById("bank").checked
+            ? "block"
+            : "none";
+        });
+      });
+
+      // File preview function
+      function previewFile(input, previewId) {
+        const file = input.files[0];
+        const preview = document.getElementById(previewId);
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            preview.src = e.target.result;
+            preview.style.display = "block";
+          };
+          reader.readAsDataURL(file);
+        }
+      }
+
+      document
+        .getElementById("gcash-proof")
+        .addEventListener("change", function () {
+          previewFile(this, "gcash-preview");
+        });
+
+      document
+        .getElementById("bank-proof")
+        .addEventListener("change", function () {
+          previewFile(this, "bank-preview");
+        });
+    </script>
+  </body>
+</html>
