@@ -1,0 +1,306 @@
+<!-- CONTACT US -->
+    <section id="contact-us">
+      <div class="container contact-container">
+        <div class="row g-5">
+          <!-- contact form -->
+          <div class="col-lg-6">
+            <h2>
+              We'd love to hear from you! Send us a message—we’ll get back to
+              you as soon as we can!
+            </h2>
+
+            <form id="contactForm">
+              <!-- name -->
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-person"></i>
+                    </span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="First Name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-person"></i>
+                    </span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Last Name"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- email and contact no -->
+              <div class="row g-3 mt-1">
+                <div class="col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-envelope"></i>
+                    </span>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="input-group">
+                    <span class="input-group-text">
+                      <i class="bi bi-telephone"></i>
+                    </span>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      placeholder="Contact Number"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- branch selection -->
+              <div class="mt-3">
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <i class="bi bi-shop"></i>
+                  </span>
+                  <select class="form-select" required>
+                    <option value="">Select Branch</option>
+                    <option value="branch1">Branch 1</option>
+                    <option value="branch2">Branch 2</option>
+                    <option value="branch3">Branch 3</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- message -->
+              <div class="mt-3">
+                <textarea
+                  class="form-control"
+                  rows="4"
+                  placeholder="Message"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- submit button -->
+              <button type="submit" class="btn-submit">Submit</button>
+            </form>
+          </div>
+
+          <!-- logo -->
+          <div class="col-lg-6">
+            <div class="contact-logo">
+              <img src="/assets/logo.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT US -->
+
+    <!-- STORE DETAILS -->
+    <section id="store-details" class="my-5">
+      <div class="container py-5 store-details">
+        <h2>Store Branches</h2>
+        <div id="storeCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- first slide -->
+            <div class="carousel-item active">
+              <div class="row g-4">
+                <!--  -->
+                <div class="col-md-4">
+                  <div class="store-card">
+                    <div class="card-header-bar">
+                      <i class="bi bi-shop"></i>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="store-name">Branch 4</h5>
+                      <p class="store-info">
+                        <strong>Location:</strong> LALALA
+                      </p>
+                      <p class="store-info">
+                        <strong>Email:</strong> LALALA@email.com
+                      </p>
+                      <p class="store-info">
+                        <strong>Contact:</strong> 09123456789
+                      </p>
+                      <p class="store-info">
+                        <strong>Owner:</strong> Anthony Jennings
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!--  -->
+                <div class="col-md-4">
+                  <div class="store-card">
+                    <div class="card-header-bar">
+                      <i class="bi bi-shop"></i>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="store-name">Branch 4</h5>
+                      <p class="store-info">
+                        <strong>Location:</strong> LALALA
+                      </p>
+                      <p class="store-info">
+                        <strong>Email:</strong> LALALA@email.com
+                      </p>
+                      <p class="store-info">
+                        <strong>Contact:</strong> 09123456789
+                      </p>
+                      <p class="store-info">
+                        <strong>Owner:</strong> Anthony Jennings
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!--  -->
+                <div class="col-md-4">
+                  <div class="store-card">
+                    <div class="card-header-bar">
+                      <i class="bi bi-shop"></i>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="store-name">Branch 4</h5>
+                      <p class="store-info">
+                        <strong>Location:</strong> LALALA
+                      </p>
+                      <p class="store-info">
+                        <strong>Email:</strong> LALALA@email.com
+                      </p>
+                      <p class="store-info">
+                        <strong>Contact:</strong> 09123456789
+                      </p>
+                      <p class="store-info">
+                        <strong>Owner:</strong> Anthony Jennings
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- second slide -->
+            <div class="carousel-item">
+              <div class="row g-4">
+                <!--  -->
+                <div class="col-md-4">
+                  <div class="store-card">
+                    <div class="card-header-bar">
+                      <i class="bi bi-shop"></i>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="store-name">Branch 4</h5>
+                      <p class="store-info">
+                        <strong>Location:</strong> LALALA
+                      </p>
+                      <p class="store-info">
+                        <strong>Email:</strong> LALALA@email.com
+                      </p>
+                      <p class="store-info">
+                        <strong>Contact:</strong> 09123456789
+                      </p>
+                      <p class="store-info">
+                        <strong>Owner:</strong> Anthony Jennings
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!--  -->
+                <div class="col-md-4">
+                  <div class="store-card">
+                    <div class="card-header-bar">
+                      <i class="bi bi-shop"></i>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="store-name">Branch 4</h5>
+                      <p class="store-info">
+                        <strong>Location:</strong> LALALA
+                      </p>
+                      <p class="store-info">
+                        <strong>Email:</strong> LALALA@email.com
+                      </p>
+                      <p class="store-info">
+                        <strong>Contact:</strong> 09123456789
+                      </p>
+                      <p class="store-info">
+                        <strong>Owner:</strong> Anthony Jennings
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!--  -->
+                <div class="col-md-4">
+                  <div class="store-card">
+                    <div class="card-header-bar">
+                      <i class="bi bi-shop"></i>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="store-name">Branch 4</h5>
+                      <p class="store-info">
+                        <strong>Location:</strong> LALALA
+                      </p>
+                      <p class="store-info">
+                        <strong>Email:</strong> LALALA@email.com
+                      </p>
+                      <p class="store-info">
+                        <strong>Contact:</strong> 09123456789
+                      </p>
+                      <p class="store-info">
+                        <strong>Owner:</strong> Anthony Jennings
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- carousel button -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#storeCarousel"
+            data-bs-slide="prev"
+          >
+            <i class="bi bi-chevron-left"></i>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#storeCarousel"
+            data-bs-slide="next"
+          >
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- STORE DETAILS -->
+
+
+<div class="wave-sep">
+        <svg
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path d="M0,50 C480,70 960,30 1440,50 L1440,120 L0,120 Z"></path>
+        </svg>
+      </div>
