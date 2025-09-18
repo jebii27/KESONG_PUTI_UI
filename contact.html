@@ -20,7 +20,7 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/demo.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
 
   <body>
@@ -75,7 +75,7 @@
     <div class="cart-sidebar" id="cartSidebar">
       <!-- header -->
       <div class="cart-header">
-        <h5><i class="bi bi-bag me-2"></i> Your Bag</h5>
+        <h5><i class="bi bi-bag-fill me-2"></i> Your Bag</h5>
         <button class="close-btn" id="closeCart">
           <i class="bi bi-x-lg"></i>
         </button>
@@ -83,12 +83,6 @@
 
       <!-- Body -->
       <div class="cart-body" id="cartItems">
-        <!-- checkbox -->
-        <div class="select-all">
-          <input type="checkbox" id="selectAll" />
-          <label for="selectAll">Select All</label>
-        </div>
-
         <!-- items -->
         <div class="cart-item">
           <input type="checkbox" class="cart-check" checked />
@@ -128,6 +122,10 @@
 
       <!-- footer -->
       <div class="cart-footer">
+        <div class="select-all">
+          <input type="checkbox" id="selectAll" />
+          <label for="selectAll">Select All</label>
+        </div>
         <div class="total">
           <span>Total:</span>
           <strong id="cartTotal">₱65</strong>
@@ -144,6 +142,11 @@
       <div class="header-text">
         <h1>GET IN TOUCH</h1>
         <h2>Leave us a message</h2>
+        <div class="mt-4 breadcrumb">
+          <a href="index.html"><span>Home</span> </a>
+          <p class="separator">-</p>
+          <span>Contact Us</span>
+        </div>
       </div>
 
       <!-- wave separator -->
@@ -164,11 +167,12 @@
 
     <!-- CONTACT US -->
     <section id="contact-us">
-      <div class="container contact-container">
+      <div class="container contact-container py-5">
         <div class="row g-5">
           <!-- contact form -->
           <div class="col-lg-6">
-            <h2>
+            <h1>Contact Us</h1>
+            <h2 class="mb-4">
               We'd love to hear from you! Send us a message—we’ll get back to
               you as soon as we can!
             </h2>
@@ -275,17 +279,48 @@
     </section>
     <!-- CONTACT US -->
 
+    <!-- VINE SEPARATOR 1 -->
+    <div class="wave-transition1">
+      <svg
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <!-- two floating lines -->
+        <path
+          d="M0,20 C120,40 240,0 360,20 C480,40 600,0 720,20 C840,40 960,0 1080,20 C1200,40 1320,0 1440,20"
+          fill="none"
+          stroke="#058240"
+          stroke-width="8"
+        />
+        <path
+          d="M0,40 C120,60 240,20 360,40 C480,60 600,20 720,40 C840,60 960,20 1080,40 C1200,60 1320,20 1440,40"
+          fill="none"
+          stroke="#058240"
+          stroke-width="8"
+        />
+        <!-- last wave: bottom filled green (becomes top of green section) -->
+        <path
+          d="M0,60 C120,80 240,40 360,60 C480,80 600,40 720,60 C840,80 960,40 1080,60 C1200,80 1320,40 1440,60 L1440,80 L0,80 Z"
+          fill="#058240"
+          stroke="#058240"
+          stroke-width="8"
+        />
+      </svg>
+    </div>
+    <!-- VINE SEPARATOR 1 -->
+
     <!-- STORE DETAILS -->
-    <section id="store-details" class="my-5">
+    <section id="store-details">
       <div class="container py-5 store-details">
-        <h2>Store Branches</h2>
+        <h2 class="mb-3">Store Branches</h2>
         <div id="storeCarousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <!-- first slide -->
             <div class="carousel-item active">
               <div class="row g-4">
                 <!--  -->
-                <div class="col-md-4">
+                <div class="col-md-4 store">
                   <div class="store-card">
                     <div class="card-header-bar">
                       <i class="bi bi-shop"></i>
@@ -309,7 +344,7 @@
                 </div>
 
                 <!--  -->
-                <div class="col-md-4">
+                <div class="col-md-4 store">
                   <div class="store-card">
                     <div class="card-header-bar">
                       <i class="bi bi-shop"></i>
@@ -333,7 +368,7 @@
                 </div>
 
                 <!--  -->
-                <div class="col-md-4">
+                <div class="col-md-4 store">
                   <div class="store-card">
                     <div class="card-header-bar">
                       <i class="bi bi-shop"></i>
@@ -362,7 +397,7 @@
             <div class="carousel-item">
               <div class="row g-4">
                 <!--  -->
-                <div class="col-md-4">
+                <div class="col-md-4 store">
                   <div class="store-card">
                     <div class="card-header-bar">
                       <i class="bi bi-shop"></i>
@@ -386,7 +421,7 @@
                 </div>
 
                 <!--  -->
-                <div class="col-md-4">
+                <div class="col-md-4 store">
                   <div class="store-card">
                     <div class="card-header-bar">
                       <i class="bi bi-shop"></i>
@@ -410,7 +445,7 @@
                 </div>
 
                 <!--  -->
-                <div class="col-md-4">
+                <div class="col-md-4 store">
                   <div class="store-card">
                     <div class="card-header-bar">
                       <i class="bi bi-shop"></i>
@@ -458,9 +493,40 @@
     </section>
     <!-- STORE DETAILS -->
 
+    <!-- VINE SEPARATOR 2 -->
+    <div class="wave-transition2">
+      <svg
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <!-- two floating lines -->
+        <path
+          d="M0,20 C120,40 240,0 360,20 C480,40 600,0 720,20 C840,40 960,0 1080,20 C1200,40 1320,0 1440,20"
+          fill="none"
+          stroke="#fefaf6"
+          stroke-width="8"
+        />
+        <path
+          d="M0,40 C120,60 240,20 360,40 C480,60 600,20 720,40 C840,60 960,20 1080,40 C1200,60 1320,20 1440,40"
+          fill="none"
+          stroke="#fefaf6"
+          stroke-width="8"
+        />
+        <!-- last wave: bottom filled green (becomes top of green section) -->
+        <path
+          d="M0,60 C120,80 240,40 360,60 C480,80 600,40 720,60 C840,80 960,40 1080,60 C1200,80 1320,40 1440,60 L1440,80 L0,80 Z"
+          fill="#fefaf6"
+          stroke="#fefaf6"
+          stroke-width="8"
+        />
+      </svg>
+    </div>
+    <!-- VINE SEPARATOR 2 -->
+
     <!-- LOCATION -->
     <section id="location" class="location my-5">
-      <h2>Our Location</h2>
+      <h2 class="mb-4">Our Location</h2>
       <div class="map-container">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d966.6843194853438!2d121.3975139!3d14.268538!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397e3efb384ecc1%3A0xf04659f5f159bd0c!2sArlene%20Macalinao%20Kesong%20Puti!5e0!3m2!1sen!2sph!4v1757887221643!5m2!1sen!2sph"
@@ -551,7 +617,7 @@
                 rows="3"
                 placeholder="Message"
               ></textarea>
-              <button type="submit" class="submit-btn mt-2">Submit</button>
+              <button type="submit" class="submit-btn mt-3">Submit</button>
             </form>
           </div>
         </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kesong Puti - Products</title>
+    <title>Kesong Puti - Contact Us</title>
 
     <!-- BOOTSTRAP -->
     <link
@@ -53,13 +53,13 @@
               <a class="nav-link" href="#">Contact Us</a>
             </li>
             <li class="nav-item"><a class="nav-link" href="#">Feedback</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Order Now</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
           </ul>
         </div>
 
         <!-- CART ICON -->
         <div
-          class="position-relative d-none d-lg-block"
+          class="cart-icon position-relative d-none d-lg-block"
           id="cartBtn"
           style="cursor: pointer"
         >
@@ -71,50 +71,249 @@
     </nav>
     <!-- NAVBAR -->
 
-    <section class="product-page">
-      <div>
-        <h1>Our Products</h1>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <h2>Second Section</h2>
-      <p>The navbar should slide down and reappear when you reach here.</p>
-    </section>
-
-    <!-- Cart Sidebar -->
+    <!-- CART SIDEBAR -->
     <div class="cart-sidebar" id="cartSidebar">
+      <!-- header -->
       <div class="cart-header">
-        <h5>Your Cart</h5>
-        <button class="btn btn-sm btn-outline-secondary" id="closeCart">
+        <h5><i class="bi bi-bag-fill me-2"></i> Your Bag</h5>
+        <button class="close-btn" id="closeCart">
           <i class="bi bi-x-lg"></i>
         </button>
       </div>
-      <div class="cart-body">
+
+      <!-- Body -->
+      <div class="cart-body" id="cartItems">
+        <!-- items -->
         <div class="cart-item">
-          <img src="https://picsum.photos/60" alt="Product" />
-          <div>
-            <h6>Product 1</h6>
-            <p class="mb-1">Qty: 1</p>
-            <strong>$25</strong>
+          <input type="checkbox" class="cart-check" checked />
+          <img src="assets/kesong puti.png" alt="Product" class="cart-img" />
+          <div class="item-info">
+            <h6>Kesong Puti Classic</h6>
+            <div class="qty-controls">
+              <button class="btn-qty minus">−</button>
+              <span class="qty">1</span>
+              <button class="btn-qty plus">+</button>
+            </div>
+            <strong class="item-price" data-price="25">₱25</strong>
+            <span class="cart-branch">Branch 1</span>
           </div>
+          <button class="btn-delete">
+            <i class="bi bi-trash"></i>
+          </button>
         </div>
+
         <div class="cart-item">
-          <img src="https://picsum.photos/61" alt="Product" />
-          <div>
-            <h6>Product 2</h6>
-            <p class="mb-1">Qty: 2</p>
-            <strong>$40</strong>
+          <input type="checkbox" class="cart-check" checked />
+          <img src="assets/kesong puti.png" alt="Product" class="cart-img" />
+          <div class="item-info">
+            <h6>Kesong Puti Premium</h6>
+            <div class="qty-controls">
+              <button class="btn-qty minus">−</button>
+              <span class="qty">2</span>
+              <button class="btn-qty plus">+</button>
+            </div>
+            <strong class="item-price" data-price="40">₱40</strong>
           </div>
+          <button class="btn-delete">
+            <i class="bi bi-trash"></i>
+          </button>
         </div>
       </div>
+
+      <!-- footer -->
       <div class="cart-footer">
-        <button class="btn btn-dark w-100">Checkout</button>
+        <div class="select-all">
+          <input type="checkbox" id="selectAll" />
+          <label for="selectAll">Select All</label>
+        </div>
+        <div class="total">
+          <span>Total:</span>
+          <strong id="cartTotal">₱65</strong>
+        </div>
+        <button class="checkout-btn">Checkout</button>
       </div>
     </div>
-
-    <!-- Overlay -->
+    <!-- overlay -->
     <div class="overlay" id="overlay"></div>
+    <!-- CART SIDEBAR -->
+
+    <!-- HEADER -->
+    <section class="header-section">
+      <div class="header-text">
+        <h1>Fresh. Creamy. Kesong Puti</h1>
+        <h2>Leave us a message</h2>
+        <div class="mt-4 breadcrumb">
+          <a href="index.html"><span>Home</span> </a>
+          <p class="separator">-</p>
+          <span>Contact Us</span>
+        </div>
+      </div>
+
+      <!-- wave separator -->
+      <svg
+        class="wave"
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <!-- white part -->
+        <path
+          d="M0,224 L48,213.3 C96,203 192,181 288,165.3 C384,149 480,139 576,149.3 C672,160 768,192 864,202.7 C960,213 1056,203 1152,186.7 C1248,171 1344,149 1392,138.7 L1440,128 L1440,320 L1392,320 C1344,320 1248,320 1152,320 C1056,320 960,320 864,320 C768,320 672,320 576,320 C480,320 384,320 288,320 C192,320 96,320 48,320 L0,320 Z"
+          fill="#fefaf6"
+        />
+      </svg>
+    </section>
+    <!-- HEADER -->
+
+    <!-- VINE SEPARATOR 1 -->
+    <!-- <div class="wave-transition1">
+      <svg
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0,20 C120,40 240,0 360,20 C480,40 600,0 720,20 C840,40 960,0 1080,20 C1200,40 1320,0 1440,20"
+          fill="none"
+          stroke="#058240"
+          stroke-width="8"
+        />
+        <path
+          d="M0,40 C120,60 240,20 360,40 C480,60 600,20 720,40 C840,60 960,20 1080,40 C1200,60 1320,20 1440,40"
+          fill="none"
+          stroke="#058240"
+          stroke-width="8"
+        />
+        <path
+          d="M0,60 C120,80 240,40 360,60 C480,80 600,40 720,60 C840,80 960,40 1080,60 C1200,80 1320,40 1440,60 L1440,80 L0,80 Z"
+          fill="#058240"
+          stroke="#058240"
+          stroke-width="8"
+        />
+      </svg>
+    </div> -->
+    <!-- VINE SEPARATOR 1 -->
+
+    <!-- VINE SEPARATOR 2 -->
+    <!-- <div class="wave-transition2">
+      <svg
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0,20 C120,40 240,0 360,20 C480,40 600,0 720,20 C840,40 960,0 1080,20 C1200,40 1320,0 1440,20"
+          fill="none"
+          stroke="#fefaf6"
+          stroke-width="8"
+        />
+        <path
+          d="M0,40 C120,60 240,20 360,40 C480,60 600,20 720,40 C840,60 960,20 1080,40 C1200,60 1320,20 1440,40"
+          fill="none"
+          stroke="#fefaf6"
+          stroke-width="8"
+        />
+        <path
+          d="M0,60 C120,80 240,40 360,60 C480,80 600,40 720,60 C840,80 960,40 1080,60 C1200,80 1320,40 1440,60 L1440,80 L0,80 Z"
+          fill="#fefaf6"
+          stroke="#fefaf6"
+          stroke-width="8"
+        />
+      </svg>
+    </div> -->
+    <!-- VINE SEPARATOR 2 -->
+
+    <!-- SEPARATOR -->
+    <section class="footer-separator"></section>
+    <!-- SEPARATOR -->
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container footer-container">
+        <div class="row">
+          <div class="col-md-3 col-sm-12 text-center footer-logo">
+            <img src="assets/logo.png" alt="Kesong Puti Logo" />
+            <p class="small mt-2">
+              Kesong Puti is your go-to online shop for fresh, authentic
+              Filipino cottage cheese. We take pride in delivering locally made,
+              high-quality products straight to your doorstep, preserving the
+              rich tradition of our hometown delicacy.
+            </p>
+          </div>
+
+          <!-- quick links -->
+          <div class="col-md-3 col-sm-12">
+            <div class="footer-links">
+              <h6 class="footer-title">Quick Links</h6>
+              <a href="#">Home</a>
+              <a href="#">Products</a>
+              <a href="#">About Us</a>
+              <a href="#">Feedback</a>
+            </div>
+            <div class="footer-links mt-5">
+              <h6 class="footer-title">Need Assistance?</h6>
+              <a href="#">Contact Us</a>
+              <a href="#">FAQ</a>
+              <a href="#">Privacy Policy</a>
+            </div>
+          </div>
+
+          <!-- business hours -->
+          <div class="col-md-3 col-sm-12">
+            <div class="contact-info">
+              <h6 class="footer-title">Business Hours</h6>
+              <p>Monday: 07:00AM - 05:00PM</p>
+              <p>Monday: 07:00AM - 05:00PM</p>
+              <p>Monday: 07:00AM - 05:00PM</p>
+              <p>Monday: 07:00AM - 05:00PM</p>
+              <p>Monday: 07:00AM - 05:00PM</p>
+              <p>Monday: 07:00AM - 05:00PM</p>
+              <p>Monday: 07:00AM - 05:00PM</p>
+            </div>
+          </div>
+
+          <!-- contact us form -->
+          <div class="col-md-3 col-sm-12 contact-form">
+            <h5 class="footer-title">Leave A Message</h5>
+            <p class="small">
+              We’d love to hear from you! Send us a message—we’ll get back to
+              you as soon as we can!
+            </p>
+            <form>
+              <input type="text" class="form-control" placeholder="Name" />
+              <input type="email" class="form-control" placeholder="Email" />
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Contact Number"
+              />
+
+              <select class="form-control">
+                <option value="" disabled selected>Select Branch</option>
+                <option value="branch1">Branch 1 - Manila</option>
+                <option value="branch2">Branch 2 - Quezon City</option>
+                <option value="branch3">Branch 3 - Cebu</option>
+                <option value="branch4">Branch 4 - Davao</option>
+              </select>
+
+              <textarea
+                class="form-control"
+                rows="3"
+                placeholder="Message"
+              ></textarea>
+              <button type="submit" class="submit-btn mt-3">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <p>Kesong Puti © 2025 All Rights Reserved</p>
+        <a href="#">Terms and Condition</a>
+      </div>
+    </footer>
+    <!-- FOOTER -->
 
     <!-- BOOTSTRAP JS -->
     <script
@@ -127,7 +326,7 @@
     <script>
       (function () {
         const navbar = document.getElementById("mainNavbar");
-        const hero = document.querySelector(".product-page");
+        const hero = document.querySelector(".header-section");
 
         function setTopState() {
           // At the very top: transparent + visible
@@ -174,9 +373,9 @@
       })();
     </script>
 
-    <!-- Cart Functionality -->
+    <!-- CART SIDEBAR -->
     <script>
-      // Cart functionality
+      // Cart sidebar functionality
       const cartBtn = document.getElementById("cartBtn");
       const cartSidebar = document.getElementById("cartSidebar");
       const closeCart = document.getElementById("closeCart");
@@ -196,6 +395,84 @@
         cartSidebar.classList.remove("active");
         overlay.classList.remove("active");
       });
+
+      // Cart items functionality
+      function updateCartTotal() {
+        let total = 0;
+        document.querySelectorAll(".cart-item").forEach((item) => {
+          const checkbox = item.querySelector(".cart-check");
+          const priceEl = item.querySelector(".item-price");
+          const qty = parseInt(item.querySelector(".qty").textContent);
+          const pricePerItem =
+            parseFloat(priceEl.getAttribute("data-price")) / qty;
+
+          if (checkbox.checked) {
+            total += pricePerItem * qty;
+          }
+        });
+        document.getElementById("cartTotal").textContent = `₱${total}`;
+      }
+
+      // Quantity controls
+      document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("plus")) {
+          let qtyEl = e.target.previousElementSibling;
+          let qty = parseInt(qtyEl.textContent);
+          qty++;
+          qtyEl.textContent = qty;
+
+          let priceEl = e.target
+            .closest(".cart-item")
+            .querySelector(".item-price");
+          let pricePerItem =
+            parseFloat(priceEl.getAttribute("data-price")) / (qty - 1);
+          let newPrice = qty * pricePerItem;
+          priceEl.setAttribute("data-price", newPrice);
+          priceEl.textContent = `₱${newPrice}`;
+          updateCartTotal();
+        }
+
+        if (e.target.classList.contains("minus")) {
+          let qtyEl = e.target.nextElementSibling;
+          let qty = parseInt(qtyEl.textContent);
+          if (qty > 1) {
+            qty--;
+            qtyEl.textContent = qty;
+
+            let priceEl = e.target
+              .closest(".cart-item")
+              .querySelector(".item-price");
+            let pricePerItem =
+              parseFloat(priceEl.getAttribute("data-price")) / (qty + 1);
+            let newPrice = qty * pricePerItem;
+            priceEl.setAttribute("data-price", newPrice);
+            priceEl.textContent = `₱${newPrice}`;
+          }
+          updateCartTotal();
+        }
+
+        if (e.target.closest(".btn-delete")) {
+          e.target.closest(".cart-item").remove();
+          updateCartTotal();
+        }
+      });
+
+      // Checkbox updates
+      document.addEventListener("change", function (e) {
+        if (e.target.classList.contains("cart-check")) {
+          updateCartTotal();
+        }
+
+        if (e.target.id === "selectAll") {
+          let checked = e.target.checked;
+          document.querySelectorAll(".cart-check").forEach((cb) => {
+            cb.checked = checked;
+          });
+          updateCartTotal();
+        }
+      });
+
+      updateCartTotal();
     </script>
   </body>
 </html>

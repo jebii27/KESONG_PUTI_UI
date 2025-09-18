@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kesong Puti - Contact Us</title>
+
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <!-- ICONS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="feedback-wrapper">
+      <!-- enter reference -->
+      <div class="card p-4 mb-4">
+        <h3 class="mb-3">Submit Your Feedback</h3>
+        <label for="reference" class="form-label">Order Reference No:</label>
+        <input
+          type="text"
+          id="reference"
+          class="form-control mb-3"
+          placeholder="e.g., REF12345"
+        />
+        <button class="btn-load" onclick="fetchOrderProducts()">
+          Load Products
+        </button>
+      </div>
+
+      <!-- reviews -->
+      <form id="feedbackForm" class="card p-4" style="display: none">
+        <h4 class="mb-4">Your Reviews</h4>
+        <div id="productsList"></div>
+        <button type="submit" class="btn-submit mt-3">Submit Feedback</button>
+      </form>
+    </div>
+
+    <!-- FUNCTIONALITIES -->
+    <script>
+      // mock fetch products
+      function fetchOrderProducts() {
+        const ref = document.getElementById("reference").value.trim();
+        if (!ref) {
+          alert("Please enter a valid reference.");
+          return;
+        }
+
+        const demoProducts = [
+          { order_item_id: 1, product_name: "Kesong Puti" },
+          { order_item_id: 2, product_name: "Kesorbetes" },
+        ];
+
+        const productsList = document.getElementById("productsList");
+        productsList.innerHTML = "";
+
+        demoProducts.forEach((item, idx) => {
+          const productCard = document.createElement("div");
+          productCard.className = "card mb-3 p-3";
+
+          productCard.innerHTML = `
+      <h5>${item.product_name}</h5>
+      <input type="hidden" name="order_item_id[]" value="${item.order_item_id}">
+
+      <label class="form-label">Rating</label>
+      <div class="stars" data-index="${idx}">
+        <span data-value="1">&#9733;</span>
+        <span data-value="2">&#9733;</span>
+        <span data-value="3">&#9733;</span>
+        <span data-value="4">&#9733;</span>
+        <span data-value="5">&#9733;</span>
+      </div>
+      <input type="hidden" name="rating[]" id="rating-${idx}" required>
+
+      <label class="form-label mt-2">Comment</label>
+      <textarea name="comment[]" class="form-control" rows="2" placeholder="Write your feedback..."></textarea>
+
+      <label class="form-label mt-3">Upload Photos/Videos</label>
+      <div class="upload-area" onclick="document.getElementById('file-${idx}').click()">
+        Click or Drag & Drop to Upload
+      </div>
+      <input type="file" id="file-${idx}" name="media-${idx}[]" class="d-none file-input" accept="image/*,video/*" multiple>
+      <div class="preview" id="preview-${idx}"></div>
+    `;
+
+          productsList.appendChild(productCard);
+        });
+
+        document.getElementById("feedbackForm").style.display = "block";
+
+        initStars();
+        initFilePreview();
+      }
+
+      // star rating
+      function initStars() {
+        document.querySelectorAll(".stars").forEach((starContainer) => {
+          const idx = starContainer.getAttribute("data-index");
+          const hiddenInput = document.getElementById(`rating-${idx}`);
+          starContainer.querySelectorAll("span").forEach((star) => {
+            star.addEventListener("click", () => {
+              const value = star.getAttribute("data-value");
+              hiddenInput.value = value;
+              starContainer
+                .querySelectorAll("span")
+                .forEach((s) => s.classList.remove("active"));
+              for (let i = 0; i < value; i++) {
+                starContainer.children[i].classList.add("active");
+              }
+            });
+          });
+        });
+      }
+
+      // file preview
+      function initFilePreview() {
+        document.querySelectorAll(".file-input").forEach((input, idx) => {
+          input.addEventListener("change", (e) => {
+            const previewContainer = document.getElementById(`preview-${idx}`);
+            previewContainer.innerHTML = "";
+            Array.from(e.target.files).forEach((file) => {
+              const url = URL.createObjectURL(file);
+              if (file.type.startsWith("image/")) {
+                previewContainer.innerHTML += `<img src="${url}" alt="preview">`;
+              } else if (file.type.startsWith("video/")) {
+                previewContainer.innerHTML += `<video src="${url}" controls></video>`;
+              }
+            });
+          });
+        });
+      }
+
+      // handle form submission
+      document
+        .getElementById("feedbackForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const formData = new FormData(this);
+          console.log("Submitted data:", formData);
+          alert(
+            "Thank you for your feedback! (Check console for submitted data)"
+          );
+        });
+    </script>
+  </body>
+</html>

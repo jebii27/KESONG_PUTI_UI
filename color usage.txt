@@ -40,3 +40,12 @@ Footer
 4. Yellow Title
 
 
+
+Finished
+1. Contact Page
+2. FAQ Page
+3. Product Page
+4. Single Product Page
+5. Feedback Page
+
+

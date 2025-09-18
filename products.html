@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kesong Puti - Contact Us</title>
 
     <!-- BOOTSTRAP -->
     <link
@@ -22,7 +22,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body style="background-color: var(--beige)">
+
+  <body>
     <!-- NAVBAR -->
     <nav
       class="navbar navbar-expand-lg fixed-top navbar-transparent navbar-hidden navbar-visible"
@@ -74,7 +75,7 @@
     <div class="cart-sidebar" id="cartSidebar">
       <!-- header -->
       <div class="cart-header">
-        <h5><i class="bi bi-bag me-2"></i> Your Bag</h5>
+        <h5><i class="bi bi-bag-fill me-2"></i> Your Bag</h5>
         <button class="close-btn" id="closeCart">
           <i class="bi bi-x-lg"></i>
         </button>
@@ -82,12 +83,6 @@
 
       <!-- Body -->
       <div class="cart-body" id="cartItems">
-        <!-- checkbox -->
-        <div class="select-all">
-          <input type="checkbox" id="selectAll" />
-          <label for="selectAll">Select All</label>
-        </div>
-
         <!-- items -->
         <div class="cart-item">
           <input type="checkbox" class="cart-check" checked />
@@ -127,6 +122,10 @@
 
       <!-- footer -->
       <div class="cart-footer">
+        <div class="select-all">
+          <input type="checkbox" id="selectAll" />
+          <label for="selectAll">Select All</label>
+        </div>
         <div class="total">
           <span>Total:</span>
           <strong id="cartTotal">₱65</strong>
@@ -134,27 +133,81 @@
         <button class="checkout-btn">Checkout</button>
       </div>
     </div>
-
+    <!-- overlay -->
     <div class="overlay" id="overlay"></div>
     <!-- CART SIDEBAR -->
 
-    <!-- PAGE HEADER -->
+    <!-- HEADER -->
     <section class="header-section">
       <div class="header-text">
         <h1>OUR PRODUCTS</h1>
-        <div class="breadcrumb">
+        <h2>Explore our Kesong Puti Delicacy</h2>
+        <div class="mt-4 breadcrumb">
           <a href="index.html"><span>Home</span> </a>
           <p class="separator">-</p>
           <span>Products</span>
         </div>
       </div>
+
+      <!-- wave separator -->
+      <svg
+        class="wave"
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <!-- white part -->
+        <path
+          d="M0,224 L48,213.3 C96,203 192,181 288,165.3 C384,149 480,139 576,149.3 C672,160 768,192 864,202.7 C960,213 1056,203 1152,186.7 C1248,171 1344,149 1392,138.7 L1440,128 L1440,320 L1392,320 C1344,320 1248,320 1152,320 C1056,320 960,320 864,320 C768,320 672,320 576,320 C480,320 384,320 288,320 C192,320 96,320 48,320 L0,320 Z"
+          fill="#fefaf6"
+        />
+      </svg>
     </section>
-    <!-- PAGE HEADER -->
+    <!-- HEADER -->
+
+    <!-- BRANDING -->
+    <section id="branding-section">
+      <div class="container">
+        <div class="row g-4">
+          <!--  -->
+          <div class="col-lg-4 branding">
+            <i class="bi bi-heart"></i>
+            <h2>Authentic Filipino Tradition</h2>
+            <p>
+              Taste a Piece of Filipino Heritage. Our kesong puti is crafted
+              with a time-honored recipe passed down through generations
+            </p>
+          </div>
+
+          <!--  -->
+          <div class="col-lg-4 branding">
+            <i class="bi bi-person"></i>
+            <h2>Freshness from Local Farms</h2>
+            <p>
+              Farm-Fresh Goodness. We use carabao’s milk sourced daily from
+              local farmers to ensure maximum freshness and flavor.
+            </p>
+          </div>
+
+          <!--  -->
+          <div class="col-lg-4 branding">
+            <i class="bi bi-leaf"></i>
+            <h2>Simple, Pure Ingredients</h2>
+            <p>
+              Pure and Simple. Absolutely Delicious. Made only with fresh
+              carabao’s milk, salt, and rennet, our cheese has no
+              preservatives—just natural flavor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- BRANDING -->
 
     <!-- PRODUCTS -->
     <section class="product-section">
-      <div class="container">
-        <div class="pt-5 filter-bar">
+      <div class="container py-5">
+        <div class="filter-bar">
           <!-- filter -->
           <div class="d-flex align-items-center filter-options">
             <span class="filter-label">Filter:</span>
@@ -230,6 +283,39 @@
               </div>
             </div>
           </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="card product-card">
+              <img
+                src="assets/banana-leaf.png"
+                class="card-img-top"
+                alt="Product Image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Product Name</h5>
+                <p class="product-price">₱1,250.00</p>
+                <button class="btn-view mb-1">View</button>
+                <button class="btn-add-to-cart">Add to Bag</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="card product-card">
+              <img
+                src="assets/banana-leaf.png"
+                class="card-img-top"
+                alt="Product Image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Product Name</h5>
+                <p class="product-price">₱1,250.00</p>
+                <button class="btn-view mb-1">View</button>
+                <button class="btn-add-to-cart">Add to Bag</button>
+              </div>
+            </div>
+          </div>
+
           <div class="col-md-3 col-sm-6">
             <div class="card product-card">
               <img
@@ -279,6 +365,27 @@
       </div>
     </section>
     <!-- PRODUCTS -->
+
+    <!-- PAGINATION -->
+    <nav aria-label="Page navigation" class="pagination-wrapper mb-5">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1" aria-disabled="true"
+            >Prev</a
+          >
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">...</a></li>
+        <li class="page-item"><a class="page-link" href="#">6</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- PAGINATION -->
 
     <!-- SEPARATOR -->
     <section class="footer-separator"></section>
@@ -358,7 +465,7 @@
                 rows="3"
                 placeholder="Message"
               ></textarea>
-              <button type="submit" class="submit-btn mt-2">Submit</button>
+              <button type="submit" class="submit-btn mt-3">Submit</button>
             </form>
           </div>
         </div>

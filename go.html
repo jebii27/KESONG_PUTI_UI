@@ -75,7 +75,7 @@
     <div class="cart-sidebar" id="cartSidebar">
       <!-- header -->
       <div class="cart-header">
-        <h5><i class="bi bi-bag me-2"></i> Your Bag</h5>
+        <h5><i class="bi bi-bag-fill me-2"></i> Your Bag</h5>
         <button class="close-btn" id="closeCart">
           <i class="bi bi-x-lg"></i>
         </button>
@@ -83,12 +83,6 @@
 
       <!-- Body -->
       <div class="cart-body" id="cartItems">
-        <!-- checkbox -->
-        <div class="select-all">
-          <input type="checkbox" id="selectAll" />
-          <label for="selectAll">Select All</label>
-        </div>
-
         <!-- items -->
         <div class="cart-item">
           <input type="checkbox" class="cart-check" checked />
@@ -128,6 +122,10 @@
 
       <!-- footer -->
       <div class="cart-footer">
+        <div class="select-all">
+          <input type="checkbox" id="selectAll" />
+          <label for="selectAll">Select All</label>
+        </div>
         <div class="total">
           <span>Total:</span>
           <strong id="cartTotal">₱65</strong>
@@ -144,6 +142,11 @@
       <div class="header-text">
         <h1>GET IN TOUCH</h1>
         <h2>Leave us a message</h2>
+        <div class="mt-4 breadcrumb">
+          <a href="index.html"><span>Home</span> </a>
+          <p class="separator">-</p>
+          <span>Contact Us</span>
+        </div>
       </div>
 
       <!-- wave separator -->
@@ -276,8 +279,39 @@
     </section>
     <!-- CONTACT US -->
 
+    <!-- VINE SEPARATOR -->
+    <div class="wave-transition">
+      <svg
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <!-- two floating lines -->
+        <path
+          d="M0,20 C120,40 240,0 360,20 C480,40 600,0 720,20 C840,40 960,0 1080,20 C1200,40 1320,0 1440,20"
+          fill="none"
+          stroke="#058240"
+          stroke-width="8"
+        />
+        <path
+          d="M0,40 C120,60 240,20 360,40 C480,60 600,20 720,40 C840,60 960,20 1080,40 C1200,60 1320,20 1440,40"
+          fill="none"
+          stroke="#058240"
+          stroke-width="8"
+        />
+        <!-- last wave: bottom filled green (becomes top of green section) -->
+        <path
+          d="M0,60 C120,80 240,40 360,60 C480,80 600,40 720,60 C840,80 960,40 1080,60 C1200,80 1320,40 1440,60 L1440,80 L0,80 Z"
+          fill="#058240"
+          stroke="#058240"
+          stroke-width="8"
+        />
+      </svg>
+    </div>
+    <!-- VINE SEPARATOR -->
+
     <!-- STORE DETAILS -->
-    <section id="store-details" class="my-5">
+    <section id="store-details">
       <div class="container py-5 store-details">
         <h2>Store Branches</h2>
         <div id="storeCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -552,7 +586,7 @@
                 rows="3"
                 placeholder="Message"
               ></textarea>
-              <button type="submit" class="submit-btn mt-2">Submit</button>
+              <button type="submit" class="submit-btn mt-3">Submit</button>
             </form>
           </div>
         </div>

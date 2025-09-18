@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kesong Puti - Products</title>
+    <title>Kesong Puti - Contact Us</title>
 
     <!-- BOOTSTRAP -->
     <link
@@ -23,10 +23,10 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
 
-  <body style="background-color: var(--beige)">
+  <body>
     <!-- NAVBAR -->
     <nav
-      class="navbar navbar-expand-lg fixed-top navbar-transparent navbar-hidden navbar-visible"
+      class="navbar navbar-expand-lg fixed-top navbar-transparent navbar-hidden navbar-visible sp-navbar"
       id="mainNavbar"
     >
       <div class="container-fluid">
@@ -73,274 +73,264 @@
 
     <!-- CART SIDEBAR -->
     <div class="cart-sidebar" id="cartSidebar">
-      <div
-        class="cart-header d-flex justify-content-between align-items-center p-3 border-bottom"
-      >
-        <h5 class="mb-0">My Cart</h5>
-        <button class="btn btn-md" id="closeCart">
+      <!-- header -->
+      <div class="cart-header">
+        <h5><i class="bi bi-bag-fill me-2"></i> Your Bag</h5>
+        <button class="close-btn" id="closeCart">
           <i class="bi bi-x-lg"></i>
         </button>
       </div>
 
-      <div class="cart-body p-3" id="cartItems">
-        <!-- Select All -->
-        <div class="d-flex align-items-center mb-2">
-          <input type="checkbox" id="selectAll" class="me-2" />
-          <label for="selectAll" class="mb-0 fw-bold">Select All</label>
-        </div>
-
-        <!-- Example Cart Item -->
-        <div class="cart-item d-flex align-items-center border-bottom py-2">
-          <input type="checkbox" class="cart-check me-2" checked />
-          <img
-            src="assets/kesong puti.png"
-            alt="Product"
-            class="cart-img me-2"
-          />
-          <div class="flex-grow-1">
-            <h6 class="mb-1">Kesong Puti Classic</h6>
-            <div class="d-flex align-items-center">
+      <!-- Body -->
+      <div class="cart-body" id="cartItems">
+        <!-- items -->
+        <div class="cart-item">
+          <input type="checkbox" class="cart-check" checked />
+          <img src="assets/kesong puti.png" alt="Product" class="cart-img" />
+          <div class="item-info">
+            <h6>Kesong Puti Classic</h6>
+            <div class="qty-controls">
               <button class="btn-qty minus">−</button>
-              <span class="qty mx-2">1</span>
+              <span class="qty">1</span>
               <button class="btn-qty plus">+</button>
             </div>
-            <strong class="item-price d-block mt-1" data-price="25">₱25</strong>
+            <strong class="item-price" data-price="25">₱25</strong>
             <span class="cart-branch">Branch 1</span>
           </div>
-          <button class="btn-delete"><i class="bi bi-trash"></i></button>
+          <button class="btn-delete">
+            <i class="bi bi-trash"></i>
+          </button>
         </div>
 
-        <div class="cart-item d-flex align-items-center border-bottom py-2">
-          <input type="checkbox" class="cart-check me-2" checked />
-          <img
-            src="assets/kesong puti.png"
-            alt="Product"
-            class="cart-img me-2"
-          />
-          <div class="flex-grow-1">
-            <h6 class="mb-1">Kesong Puti Premium</h6>
-            <div class="d-flex align-items-center">
+        <div class="cart-item">
+          <input type="checkbox" class="cart-check" checked />
+          <img src="assets/kesong puti.png" alt="Product" class="cart-img" />
+          <div class="item-info">
+            <h6>Kesong Puti Premium</h6>
+            <div class="qty-controls">
               <button class="btn-qty minus">−</button>
-              <span class="qty mx-2">2</span>
+              <span class="qty">2</span>
               <button class="btn-qty plus">+</button>
             </div>
-            <strong class="item-price d-block mt-1" data-price="40">₱40</strong>
+            <strong class="item-price" data-price="40">₱40</strong>
           </div>
-          <button class="btn-delete"><i class="bi bi-trash"></i></button>
+          <button class="btn-delete">
+            <i class="bi bi-trash"></i>
+          </button>
         </div>
       </div>
 
-      <!-- Footer -->
-      <div class="cart-footer p-3 border-top">
-        <div class="d-flex justify-content-between mb-2">
-          <strong>Total:</strong>
-          <span id="cartTotal">₱65</span>
+      <!-- footer -->
+      <div class="cart-footer">
+        <div class="select-all">
+          <input type="checkbox" id="selectAll" />
+          <label for="selectAll">Select All</label>
         </div>
-        <button class="btn btn-dark w-100">Checkout</button>
+        <div class="total">
+          <span>Total:</span>
+          <strong id="cartTotal">₱65</strong>
+        </div>
+        <button class="checkout-btn">Checkout</button>
       </div>
     </div>
+    <!-- overlay -->
+    <div class="overlay" id="overlay"></div>
     <!-- CART SIDEBAR -->
 
-    <!-- CART OVERLAY -->
-    <div class="overlay" id="overlay"></div>
-    <!-- CART OVERLAY -->
-
-    <!-- PRODUCTS PAGE HEADER -->
-    <section class="header-section">
-      <div class="header-text">
-        <h1>PRODUCT DETAILS</h1>
-        <div class="breadcrumb">
-          <a href="index.html"><span>Home</span> </a>
-          <p class="separator">-</p>
-          <span>Product Details</span>
-        </div>
-      </div>
-    </section>
-    <!-- PRODUCTS PAGE HEADER -->
+    <!-- HEADER -->
+    <section class="sp-header-section"></section>
+    <!-- HEADER -->
 
     <!-- PRODUCT DETAILS -->
-    <section id="single-product" class="container py-5">
-      <div class="row g-4 align-items-start">
-        <!-- Product Image -->
-        <div class="col-md-6">
-          <img
-            src="assets/banana-leaf.png"
-            alt="Product Image"
-            class="img-fluid rounded-4 shadow product-image"
-            id="mainImage"
-          />
+    <section id="single-product">
+      <div class="product-container py-5">
+        <div class="row g-4 align-items-start">
+          <!-- images -->
+          <div class="col-md-6">
+            <img
+              src="assets/banana-leaf.png"
+              alt="Product Image"
+              class="product-image"
+              id="mainImage"
+            />
 
-          <div class="row mt-3">
-            <div class="col-3">
-              <img
-                src="assets/banana-leaf.png"
-                class="thumb-image"
-                onclick="changeImage(this)"
-              />
+            <!--  -->
+            <div class="row mt-3">
+              <div class="col-3">
+                <img
+                  src="assets/banana-leaf.png"
+                  class="thumb-image"
+                  onclick="changeImage(this)"
+                />
+              </div>
+
+              <!--  -->
+              <div class="col-3">
+                <img
+                  src="assets/banana-leaf.png"
+                  class="thumb-image"
+                  onclick="changeImage(this)"
+                />
+              </div>
+
+              <!--  -->
+              <div class="col-3">
+                <img
+                  src="assets/banana-leaf.png"
+                  class="thumb-image"
+                  onclick="changeImage(this)"
+                />
+              </div>
+
+              <!--  -->
+              <div class="col-3">
+                <img
+                  src="assets/banana-leaf.png"
+                  class="thumb-image"
+                  onclick="changeImage(this)"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- product details -->
+          <div class="col-md-6 product-details">
+            <h1 class="product-title">DAHON DAHON DAHON KESORBETER SMALL</h1>
+
+            <!-- Rating -->
+            <div class="rating d-flex align-items-center mb-2">
+              <div class="stars me-2">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star text-warning"></i>
+              </div>
+              <span class="fw-semibold text-muted">(200 reviews)</span>
             </div>
 
-            <div class="col-3">
-              <img
-                src="assets/banana-leaf.png"
-                class="thumb-image"
-                onclick="changeImage(this)"
-              />
+            <!-- description -->
+            <div class="description mb-4">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Accusantium voluptas adipisci nihil hic voluptatibus, inventore
+                autem ipsam ad fugiat natus in non debitis quo eveniet optio.
+                Placeat et distinctio possimus?
+              </p>
             </div>
 
-            <div class="col-3">
-              <img
-                src="assets/banana-leaf.png"
-                class="thumb-image"
-                onclick="changeImage(this)"
-              />
+            <!-- Quantity & Variation -->
+            <div class="d-flex mb-3">
+              <div class="qty-box">
+                <button class="qty-btn" onclick="changeQty(-1)">−</button>
+                <input
+                  type="text"
+                  id="quantity"
+                  class="qty-input"
+                  value="1"
+                  readonly
+                />
+                <button class="qty-btn" onclick="changeQty(1)">+</button>
+              </div>
             </div>
 
-            <div class="col-3">
-              <img
-                src="assets/banana-leaf.png"
-                class="thumb-image"
-                onclick="changeImage(this)"
-              />
+            <!-- price -->
+            <div class="product-price mb-4">
+              <span>₱1000</span>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <div>
+              <button class="btn-add">Add To Cart</button>
             </div>
           </div>
         </div>
 
-        <!-- Product Details -->
-        <div class="col-md-6 product-details">
-          <h1 class="product-title">DAHON DAHON DAHON KESORBETER SMALL</h1>
+        <!-- more details -->
+        <section id="details" class="mt-5">
+          <div class="row about-content">
+            <!-- tabs -->
+            <div class="col-md-6 col-sm-12">
+              <div class="tab-container">
+                <div class="tab-box">
+                  <button class="tab-btn active">Product Details</button>
+                  <button class="tab-btn">Contact Us</button>
+                  <button class="tab-btn">Shipping</button>
+                  <div class="line"></div>
+                </div>
 
-          <!-- Rating -->
-          <div class="rating d-flex align-items-center mb-4">
-            <div class="stars me-2">
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star-fill text-warning"></i>
-              <i class="bi bi-star text-warning"></i>
+                <div class="content-box">
+                  <div class="content active">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Nam aliquam magnam exercitationem dicta voluptatum.
+                      Inventore ad dolores, at sunt placeat voluptatem neque
+                      possimus? Nihil laudantium provident vero veritatis
+                      debitis libero! 123
+                    </p>
+                  </div>
+
+                  <div class="content">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Nam aliquam magnam exercitationem dicta voluptatum.
+                      Inventore ad dolores, at sunt placeat voluptatem neque
+                      possimus? Nihil laudantium provident vero veritatis
+                      debitis libero! 456
+                    </p>
+                  </div>
+
+                  <div class="content">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Nam aliquam magnam exercitationem dicta voluptatum.
+                      Inventore ad dolores, at sunt placeat voluptatem neque
+                      possimus? Nihil laudantium provident vero veritatis
+                      debitis libero! 789
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <span class="fw-semibold text-muted">(200 reviews)</span>
-          </div>
 
-          <!-- Branch -->
-          <div class="branch">
-            <span>Branch 1</span>
-            <span style="color: var(--mint)"
-              >Available for Deliver and Pickup</span
-            >
-          </div>
+            <!-- related items -->
+            <div class="col-md-6 col-sm-12">
+              <div class="related-items">
+                <h3>You might also like:</h3>
+                <!-- 1 -->
+                <a href="product1.html" class="related-card">
+                  <img src="assets/banana-leaf.png" alt="Item 1" />
+                  <div class="related-info">
+                    <h5>Kesong Puti</h5>
+                    <p>Kesong Puti, Kesong Puti Kesong Puti, Kesong Puti.</p>
+                    <span class="price">₱1000</span>
+                  </div>
+                </a>
 
-          <!-- Price -->
-          <div class="my-3 product-price">
-            <span>₱1000</span>
-          </div>
+                <!-- 2 -->
+                <a href="product2.html" class="related-card">
+                  <img src="assets/banana-leaf.png" alt="Item 2" />
+                  <div class="related-info">
+                    <h5>Kesong Puti</h5>
+                    <p>Kesong Puti, Kesong Puti Kesong Puti, Kesong Puti.</p>
+                    <span class="price">₱1000</span>
+                  </div>
+                </a>
 
-          <!-- Quantity & Variation -->
-          <div class="d-flex my-3">
-            <div class="qty-box">
-              <button class="qty-btn" onclick="changeQty(-1)">−</button>
-              <input
-                type="text"
-                id="quantity"
-                class="qty-input"
-                value="1"
-                readonly
-              />
-              <button class="qty-btn" onclick="changeQty(1)">+</button>
+                <!-- 3 -->
+                <a href="product3.html" class="related-card">
+                  <img src="assets/banana-leaf.png" alt="Item 3" />
+                  <div class="related-info">
+                    <h5>Kesong Puti</h5>
+                    <p>Kesong Puti, Kesong Puti Kesong Puti, Kesong Puti.</p>
+                    <span class="price">₱1000</span>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
-
-          <!-- Add to Cart Button -->
-          <div class="d-flex flex-column gap-3 mt-4">
-            <button class="btn-add">Add To Cart</button>
-            <button class="btn-buy">Buy Now</button>
-          </div>
-        </div>
+        </section>
       </div>
-
-      <!-- More Details -->
-      <section id="details" class="mt-5">
-        <div class="row about-content">
-          <!-- Tabs -->
-          <div class="col-md-6 col-sm-12">
-            <div class="tab-container">
-              <div class="tab-box">
-                <button class="tab-btn active">Product Details</button>
-                <button class="tab-btn">Contact Us</button>
-                <button class="tab-btn">Reviews</button>
-                <div class="line"></div>
-              </div>
-
-              <div class="content-box">
-                <div class="content active">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Nam aliquam magnam exercitationem dicta voluptatum.
-                    Inventore ad dolores, at sunt placeat voluptatem neque
-                    possimus? Nihil laudantium provident vero veritatis debitis
-                    libero! 123
-                  </p>
-                </div>
-
-                <div class="content">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Nam aliquam magnam exercitationem dicta voluptatum.
-                    Inventore ad dolores, at sunt placeat voluptatem neque
-                    possimus? Nihil laudantium provident vero veritatis debitis
-                    libero! 456
-                  </p>
-                </div>
-
-                <div class="content">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Nam aliquam magnam exercitationem dicta voluptatum.
-                    Inventore ad dolores, at sunt placeat voluptatem neque
-                    possimus? Nihil laudantium provident vero veritatis debitis
-                    libero! 789
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Related Items -->
-          <div class="col-md-6 col-sm-12">
-            <h3>Related Products</h3>
-            <div class="related-items">
-              <!-- Item 1 -->
-              <a href="product1.html" class="related-card">
-                <img src="assets/banana-leaf.png" alt="Item 1" />
-                <div class="related-info">
-                  <h5>Savory BBQ Delight</h5>
-                  <p>Tender plant-based ribs glazed in rich smoky sauce.</p>
-                  <span class="price">₱1000</span>
-                </div>
-              </a>
-
-              <!-- Item 2 -->
-              <a href="product2.html" class="related-card">
-                <img src="assets/banana-leaf.png" alt="Item 2" />
-                <div class="related-info">
-                  <h5>Spicy Herb Tenders</h5>
-                  <p>Crispy and bold, with a touch of fiery seasoning.</p>
-                  <span class="price">₱1000</span>
-                </div>
-              </a>
-
-              <!-- Item 3 -->
-              <a href="product3.html" class="related-card">
-                <img src="assets/banana-leaf.png" alt="Item 3" />
-                <div class="related-info">
-                  <h5>Classic Grilled Strips</h5>
-                  <p>Juicy grilled strips packed with flavor and zest.</p>
-                  <span class="price">₱1000</span>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </section>
     <!-- PRODUCT DETAILS -->
 
@@ -447,7 +437,7 @@
     <script>
       (function () {
         const navbar = document.getElementById("mainNavbar");
-        const hero = document.querySelector(".header-section");
+        const hero = document.querySelector(".sp-header-section");
 
         function setTopState() {
           // At the very top: transparent + visible
