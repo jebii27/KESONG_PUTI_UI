@@ -548,6 +548,54 @@
 
 
 
+ /* ======================================== HOME PAGE ======================================== */
+ /* ======================================== HOME PAGE ======================================== */
+
+ .home-header-section {
+     position: relative;
+     overflow: hidden;
+     font-family: "Lilita One", sans-serif;
+ }
+
+
+ .home-header-section .header-text {
+     position: relative;
+     padding: 0 20px;
+     z-index: 2;
+     margin-top: 80px;
+ }
+
+ .home-header-section h1 {
+     color: var(--black);
+     margin: 0;
+     font-size: 222px;
+     /* for responsiveness */
+     text-align: center;
+ }
+
+
+ .home-hero {
+    font-family: "Poppins", sans-serif;
+ }
+
+ .home-image {
+    display: flex;
+    justify-content: center;
+ }
+ 
+ .images-container {
+    padding: 0 20px;
+ }
+
+ .img-home {
+    background-color: red;
+ }
+
+ /* ======================================== HOME PAGE ======================================== */
+ /* ======================================== HOME PAGE ======================================== */
+
+
+
 
 
 
