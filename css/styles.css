@@ -551,6 +551,7 @@
  /* ======================================== HOME PAGE ======================================== */
  /* ======================================== HOME PAGE ======================================== */
 
+ /* HERO */
  .home-header-section {
      position: relative;
      overflow: hidden;
@@ -560,36 +561,130 @@
 
  .home-header-section .header-text {
      position: relative;
-     padding: 0 20px;
      z-index: 2;
      margin-top: 80px;
+     height: 25vh;
  }
 
  .home-header-section h1 {
-     color: var(--black);
+     color: var(--green);
      margin: 0;
+     padding: 0;
      font-size: 222px;
      /* for responsiveness */
      text-align: center;
  }
 
+ .home-header-section span {
+     color: var(--yellow)
+ }
+
 
  .home-hero {
-    font-family: "Poppins", sans-serif;
+     font-family: "Poppins", sans-serif;
  }
 
  .home-image {
-    display: flex;
-    justify-content: center;
+     display: flex;
+     justify-content: center;
  }
- 
+
  .images-container {
-    padding: 0 20px;
+     padding: 0 20px;
+     display: flex;
+     gap: 15px;
+     justify-content: center;
  }
 
  .img-home {
-    background-color: red;
+     position: relative;
+     flex: 1 1 30%;
+     height: 60vh;
+     border-radius: 15px;
+     overflow: hidden;
+     background: #ccc;
+     /* fallback color */
+     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+     cursor: pointer;
+     transition: all 0.3s;
  }
+
+ .img-home:hover {
+     transform: scale(1.02);
+     box-shadow: 0 4px 18px rgba(5, 130, 64, 1);
+ }
+
+ .img-home img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     display: block;
+ }
+
+ .img-home i {
+     position: absolute;
+     top: 5px;
+     right: 15px;
+     font-size: 50px;
+     color: white;
+ }
+
+ /* Text at bottom-left */
+ .img-home .card-text {
+     position: absolute;
+     bottom: 20px;
+     left: 15px;
+     color: var(--white);
+     font-weight: bold;
+     font-size: 50px;
+     line-height: 1.2;
+     text-transform: uppercase;
+ }
+
+ /* HERO */
+
+
+
+
+
+
+
+ /* FEARTURED */
+ .featured-products {
+     font-family: "Poppins", sans-serif;
+     background-color: var(--green);
+ }
+
+ .featured-products h1 {
+     text-align: center;
+     color: var(--white);
+     font-family: "Lilita One", sans-serif;
+ }
+
+ .card-container {
+     display: flex;
+     gap: 15px;
+     justify-content: center;
+     flex-wrap: nowrap;
+ }
+
+ .img-card {
+     border-radius: 15px;
+     overflow: hidden;
+     background: #ccc;
+     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+     cursor: pointer;
+     transition: all 0.3s;
+ }
+
+ .img-card img {
+     width: 100%;
+     object-fit: cover;
+
+ }
+
+
+ /* FEARTURED */
 
  /* ======================================== HOME PAGE ======================================== */
  /* ======================================== HOME PAGE ======================================== */
