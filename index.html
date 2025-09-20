@@ -15,8 +15,8 @@
 
     <!-- ICONS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
 
     <!-- CSS -->
@@ -63,7 +63,7 @@
           id="cartBtn"
           style="cursor: pointer"
         >
-          <i class="bi bi-bag-fill fs-4"></i>
+          <i class="fa-solid fa-bag-shopping fs-4"></i>
           <span class="cart-badge" id="cartCount">2</span>
         </div>
         <!-- CART ICON -->
@@ -75,13 +75,13 @@
     <div class="cart-sidebar" id="cartSidebar">
       <!-- header -->
       <div class="cart-header">
-        <h5><i class="bi bi-bag-fill me-2"></i> Your Bag</h5>
+        <h5><i class="fa-solid fa-bag-shopping me-2"></i> Your Bag</h5>
         <button class="close-btn" id="closeCart">
-          <i class="bi bi-x-lg"></i>
+          <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
 
-      <!-- Body -->
+      <!-- body -->
       <div class="cart-body" id="cartItems">
         <!-- items -->
         <div class="cart-item">
@@ -155,7 +155,7 @@
         <div class="images-container">
           <div class="img-home">
             <img src="/assets/home1.png" alt="Images" />
-            <i class="bi bi-heart-fill"></i>
+            <i class="fa-solid fa-heart"></i>
             <div class="card-text">
               SOFT <br />
               CREAMY AND <br />
@@ -164,7 +164,7 @@
           </div>
           <div class="img-home">
             <img src="/assets/home4.png" alt="Images" />
-            <i class="bi bi-heart-fill"></i>
+            <i class="fa-solid fa-heart"></i>
             <div class="card-text">
               MORNING <br />
               CLASSIC <br />
@@ -173,7 +173,7 @@
           </div>
           <div class="img-home">
             <img src="/assets/home3.png" alt="Images" />
-            <i class="bi bi-heart-fill"></i>
+            <i class="fa-solid fa-heart"></i>
             <div class="card-text">
               FRESH <br />
               WHITE <br />
@@ -182,7 +182,7 @@
           </div>
           <div class="img-home">
             <img src="/assets/home5.png" alt="Images" />
-            <i class="bi bi-heart-fill"></i>
+            <i class="fa-solid fa-heart"></i>
             <div class="card-text">
               SNACKS <br />
               AND <br />
@@ -224,24 +224,32 @@
     <!-- VINE SEPARATOR 1 -->
 
     <!-- FEATURED -->
-    <section class="featured-products mb-5 py-5">
-      <div class="container">
-        <h1 class="mb-3">The Original & Classics</h1>
+    <section class="featured-products">
+      <div class="container text-center">
+        <h1 class="mb-4">The Original & Classics</h1>
 
         <div class="row card-container">
-          <div class="col-lg-6 img-card">
-            <img src="/assets/featured1.png" alt="" />
+          <div class="col-md-5">
+            <div class="card-custom">
+              <img src="/assets/featured1.png" alt="Kesorbetes" />
+              <div class="card-text">KESORBETES</div>
+            </div>
           </div>
-          <div class="col-lg-6 img-card">
-            <img src="/assets/featured2.png" alt="" />
+
+          <div class="col-md-5">
+            <div class="card-custom">
+              <img src="/assets/featured2.png" alt="Kesong Puti" />
+              <div class="card-text">KESONG PUTI</div>
+            </div>
           </div>
         </div>
+        <button class="view-btn mt-4">View More</button>
       </div>
     </section>
     <!-- FEATURED -->
 
     <!-- VINE SEPARATOR 2 -->
-    <!-- <div class="wave-transition2">
+    <div class="wave-transition2">
       <svg
         viewBox="0 0 1440 80"
         preserveAspectRatio="none"
@@ -266,7 +274,130 @@
           stroke-width="8"
         />
       </svg>
-    </div> -->
+    </div>
+    <!-- VINE SEPARATOR 2 -->
+
+    <!-- DELIVERY OR PICKUP -->
+    <section id="del-pick">
+      <div class="del-pick">
+        <div class="del-pick-text">
+          <h1>
+            <span>THE</span> <br />
+            <span>CHOICE</span> <br />
+            <span>IS YOURS:</span> <br />
+            <span>GO OR STAY</span>
+          </h1>
+          <div class="text-button mt-4">
+            <button class="view-btn">Shop All</button>
+            <!-- <p>Available for Deliver or Pickup</p> -->
+          </div>
+        </div>
+
+        <div class="image-container">
+          <img src="/assets/try2.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- DELIVERY OR PICKUP -->
+
+    <!-- VINE SEPARATOR 1 -->
+    <div class="wave-transition1">
+      <svg
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0,20 C120,40 240,0 360,20 C480,40 600,0 720,20 C840,40 960,0 1080,20 C1200,40 1320,0 1440,20"
+          fill="none"
+          stroke="#058240"
+          stroke-width="8"
+        />
+        <path
+          d="M0,40 C120,60 240,20 360,40 C480,60 600,20 720,40 C840,60 960,20 1080,40 C1200,60 1320,20 1440,40"
+          fill="none"
+          stroke="#058240"
+          stroke-width="8"
+        />
+        <path
+          d="M0,60 C120,80 240,40 360,60 C480,80 600,40 720,60 C840,80 960,40 1080,60 C1200,80 1320,40 1440,60 L1440,80 L0,80 Z"
+          fill="#058240"
+          stroke="#058240"
+          stroke-width="8"
+        />
+      </svg>
+    </div>
+    <!-- VINE SEPARATOR 1 -->
+
+    <!-- ABOUT US -->
+    <section id="about">
+      <div class="container text-center">
+        <h1 class="mb-5">Why is it Good?</h1>
+        <div class="row">
+          <div class="col-lg-3 perks">
+            <i class="fa-solid fa-cheese"></i>
+            <h3>Freshness and Simple Production</h3>
+            <p>
+              Kesong puti is a good choice because it's a fresh cheese without
+              preservatives, offering a pure, natural flavor.
+            </p>
+          </div>
+          <div class="col-lg-3 perks">
+            <i class="fa-solid fa-cheese"></i>
+            <h3>Rich in Nutrients</h3>
+            <p>
+              It is a great source of essential nutrients, particularly protein
+              and calcium, from the rich carabao's milk.
+            </p>
+          </div>
+          <div class="col-lg-3 perks">
+            <i class="fa-solid fa-cheese"></i>
+            <h3>Cultural and Culinary Importance</h3>
+            <p>
+              Kesong puti is a cultural staple in the Philippines, often enjoyed
+              as a classic breakfast food.
+            </p>
+          </div>
+          <div class="col-lg-3 perks">
+            <i class="fa-solid fa-cheese"></i>
+            <h3>Versatility in the Kitchen</h3>
+            <p>
+              Its mild, slightly salty flavor makes it a versatile ingredient
+              for both sweet and savory dishes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT US -->
+
+    <!-- VINE SEPARATOR 2 -->
+    <div class="wave-transition2">
+      <svg
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0,20 C120,40 240,0 360,20 C480,40 600,0 720,20 C840,40 960,0 1080,20 C1200,40 1320,0 1440,20"
+          fill="none"
+          stroke="#fefaf6"
+          stroke-width="8"
+        />
+        <path
+          d="M0,40 C120,60 240,20 360,40 C480,60 600,20 720,40 C840,60 960,20 1080,40 C1200,60 1320,20 1440,40"
+          fill="none"
+          stroke="#fefaf6"
+          stroke-width="8"
+        />
+        <path
+          d="M0,60 C120,80 240,40 360,60 C480,80 600,40 720,60 C840,80 960,40 1080,60 C1200,80 1320,40 1440,60 L1440,80 L0,80 Z"
+          fill="#fefaf6"
+          stroke="#fefaf6"
+          stroke-width="8"
+        />
+      </svg>
+    </div>
     <!-- VINE SEPARATOR 2 -->
 
     <!-- BOOTSTRAP JS -->
@@ -280,7 +411,7 @@
     <script>
       (function () {
         const navbar = document.getElementById("mainNavbar");
-        const hero = document.querySelector(".header-section");
+        const hero = document.querySelector(".home-header-section");
 
         function setTopState() {
           // At the very top: transparent + visible

@@ -649,16 +649,20 @@
 
 
 
- /* FEARTURED */
+
+
+ /* FEATURED */
  .featured-products {
      font-family: "Poppins", sans-serif;
      background-color: var(--green);
+     padding: 7rem 0 9rem 0;
  }
 
  .featured-products h1 {
      text-align: center;
      color: var(--white);
      font-family: "Lilita One", sans-serif;
+
  }
 
  .card-container {
@@ -668,26 +672,207 @@
      flex-wrap: nowrap;
  }
 
- .img-card {
+ .card-custom {
      border-radius: 15px;
      overflow: hidden;
-     background: #ccc;
-     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+     position: relative;
+     text-align: center;
+     color: white;
      cursor: pointer;
-     transition: all 0.3s;
+     transition: 0.3s ease-in-out;
+     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
  }
 
- .img-card img {
+ .card-custom img {
      width: 100%;
+     height: 380px;
      object-fit: cover;
+     transition: 0.3s ease-in-out;
+     filter: brightness(75%);
+     /* Slightly dark by default */
+ }
 
+ .card-custom:hover img {
+     filter: brightness(100%);
+     transform: scale(1.03);
+ }
+
+ .card-custom .card-text {
+     position: absolute;
+     bottom: 15px;
+     left: 0;
+     right: 0;
+     font-size: 2rem;
+     text-transform: uppercase;
+     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+     font-family: "Lilita One", sans-serif;
+ }
+
+ .view-btn {
+     border-radius: 50px;
+     align-items: center;
+     padding: 12px 50px;
+     background-color: transparent;
+     border: 2px solid var(--black);
+     background-color: var(--yellow);
+     color: var(--black);
+     transition: all 0.3s;
+     font-family: 'Lilita One', sans-serif;
+     font-size: 20px;
+ }
+
+ .view-btn:hover {
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
  }
 
 
- /* FEARTURED */
+ /* FEATURED */
+
+
+
+
+
+
+
+
+
+
+
+ /* DELIVERY OR PICKUP */
+ #del-pick {
+     font-family: 'Lilita One', sans-serif;
+     padding: 100px 0;
+ }
+
+ .del-pick {
+     padding: 0 5rem;
+     display: flex;
+     justify-content: center;
+     flex-wrap: nowrap;
+ }
+
+ .del-pick-text {
+     width: 50%;
+ }
+
+ .del-pick h1 {
+     font-size: 10rem;
+     text-align: left;
+     padding: 0;
+     margin: 0;
+     line-height: 1;
+     color: var(--yellow);
+     -webkit-text-stroke: 10px black;
+     paint-order: stroke fill;
+ }
+
+ .text-button {
+     display: flex;
+     gap: 20px;
+ }
+
+ .del-pick p {
+     font-size: 30px;
+     color: var(--black);
+ }
+
+ .image-container {
+     display: flex;
+     justify-content: center;
+     width: 50%;
+     z-index: -1;
+ }
+
+
+ .text-button .view-btn {
+     border-radius: 50px;
+     align-items: center;
+     padding: 10px 50px;
+     background-color: transparent;
+     border: none;
+     background-color: var(--green);
+     color: var(--white);
+     transition: all 0.3s;
+     font-family: 'Lilita One', sans-serif;
+     font-size: 30px;
+ }
+
+ .text-button .view-btn:hover {
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+ }
+
+ /* DELIVERY OR PICKUP */
+
+
+
+
+
+
+
+
+
+
+
+ /* ABOUT */
+ #about {
+     background-color: var(--green);
+     font-family: "Lilita One", sans-serif;
+     padding: 2rem 0 3rem 0;
+ }
+
+ #about h1 {
+     color: var(--white);
+ }
+
+ .perks {
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: center;
+     text-align: center;
+
+ }
+
+ .perks i {
+     font-size: 50px;
+     color: var(--yellow);
+     margin-bottom: 15px;
+ }
+
+ .perks h3 {
+     color: var(--yellow);
+     text-align: center;
+     text-transform: uppercase;
+ }
+
+ .perks p {
+     color: var(--white);
+     font-family: "Poppins", sans-serif;
+     align-items: center;
+
+ }
+
+ /* ABOUT */
+
+
+
+
+
+
 
  /* ======================================== HOME PAGE ======================================== */
  /* ======================================== HOME PAGE ======================================== */
+
+
+
+
+
+
+
+
+
+
+
 
 
 
