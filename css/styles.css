@@ -534,6 +534,53 @@
 
 
 
+ #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--yellow);
+      color: var(--white);
+      border: none;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      font-size: 22px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(30px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      animation: bounce 2s infinite;
+    }
+
+    /* Show animation */
+    #backToTop.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    /* Hover effect */
+    #backToTop:hover {
+      transform: scale(1.15);
+      background: #046c34;
+    }
+
+    /* Bounce animation */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+
  /* ======================================== ESSENTIALS ======================================== */
  /* ======================================== ESSENTIALS ======================================== */
 
@@ -745,7 +792,7 @@
  }
 
  .del-pick {
-     padding: 0 5rem;
+     padding: 0 3rem;
      display: flex;
      justify-content: center;
      flex-wrap: nowrap;
@@ -761,9 +808,9 @@
      padding: 0;
      margin: 0;
      line-height: 1;
-     color: var(--yellow);
-     -webkit-text-stroke: 10px black;
-     paint-order: stroke fill;
+     color: var(--green);
+     /* -webkit-text-stroke: 10px black;
+     paint-order: stroke fill; */
  }
 
  .text-button {
@@ -813,14 +860,14 @@
 
 
 
- /* ABOUT */
- #about {
+ /* WHY IS IT GOOD */
+ #reasons {
      background-color: var(--green);
      font-family: "Lilita One", sans-serif;
      padding: 2rem 0 3rem 0;
  }
 
- #about h1 {
+ #reasons h1 {
      color: var(--white);
  }
 
@@ -852,7 +899,7 @@
 
  }
 
- /* ABOUT */
+ /* WHY IS IT GOOD */
 
 
 

@@ -193,6 +193,7 @@
       </div>
     </section>
     <!-- HERO PAGE -->
+     
 
     <!-- VINE SEPARATOR 1 -->
     <div class="wave-transition1">
@@ -285,7 +286,7 @@
             <span>THE</span> <br />
             <span>CHOICE</span> <br />
             <span>IS YOURS:</span> <br />
-            <span>GO OR STAY</span>
+            <span style="color: var(--yellow);">GO OR STAY</span>
           </h1>
           <div class="text-button mt-4">
             <button class="view-btn">Shop All</button>
@@ -294,7 +295,7 @@
         </div>
 
         <div class="image-container">
-          <img src="/assets/try2.png" alt="" />
+          <img src="/assets/try.png" alt="" />
         </div>
       </div>
     </section>
@@ -330,12 +331,12 @@
     <!-- VINE SEPARATOR 1 -->
 
     <!-- ABOUT US -->
-    <section id="about">
+    <section id="reasons">
       <div class="container text-center">
         <h1 class="mb-5">Why is it Good?</h1>
         <div class="row">
           <div class="col-lg-3 perks">
-            <i class="fa-solid fa-cheese"></i>
+            <i class="fa-solid fa-cow"></i>
             <h3>Freshness and Simple Production</h3>
             <p>
               Kesong puti is a good choice because it's a fresh cheese without
@@ -343,7 +344,7 @@
             </p>
           </div>
           <div class="col-lg-3 perks">
-            <i class="fa-solid fa-cheese"></i>
+            <i class="fa-solid fa-pills"></i>
             <h3>Rich in Nutrients</h3>
             <p>
               It is a great source of essential nutrients, particularly protein
@@ -359,7 +360,7 @@
             </p>
           </div>
           <div class="col-lg-3 perks">
-            <i class="fa-solid fa-cheese"></i>
+            <i class="fa-solid fa-utensils"></i>
             <h3>Versatility in the Kitchen</h3>
             <p>
               Its mild, slightly salty flavor makes it a versatile ingredient
@@ -399,6 +400,104 @@
       </svg>
     </div>
     <!-- VINE SEPARATOR 2 -->
+
+    <!-- TEAM -->
+     <section id="our-team">
+      <div></div>
+     </section>
+    <!-- TEAM -->
+
+    <button id="backToTop">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container footer-container">
+        <div class="row">
+          <div class="col-md-3 col-sm-12 text-center footer-logo">
+            <img src="assets/logo.png" alt="Kesong Puti Logo" />
+            <p class="small mt-2">
+              Kesong Puti is your go-to online shop for fresh, authentic
+              Filipino cottage cheese. We take pride in delivering locally made,
+              high-quality products straight to your doorstep, preserving the
+              rich tradition of our hometown delicacy.
+            </p>
+          </div>
+
+          <!-- quick links -->
+          <div class="col-md-3 col-sm-12">
+            <div class="footer-links">
+              <h6 class="footer-title">Quick Links</h6>
+              <a href="#">Home</a>
+              <a href="#">Products</a>
+              <a href="#">About Us</a>
+              <a href="#">Feedback</a>
+            </div>
+            <div class="footer-links mt-5">
+              <h6 class="footer-title">Need Assistance?</h6>
+              <a href="#">Contact Us</a>
+              <a href="#">FAQ</a>
+              <a href="#">Privacy Policy</a>
+            </div>
+          </div>
+
+          <!-- business hours -->
+          <div class="col-md-3 col-sm-12">
+            <div class="contact-info">
+              <h6 class="footer-title">Business Hours</h6>
+              <p>Monday: 07:00AM - 05:00PM</p>
+              <p>Monday: 07:00AM - 05:00PM</p>
+              <p>Monday: 07:00AM - 05:00PM</p>
+              <p>Monday: 07:00AM - 05:00PM</p>
+              <p>Monday: 07:00AM - 05:00PM</p>
+              <p>Monday: 07:00AM - 05:00PM</p>
+              <p>Monday: 07:00AM - 05:00PM</p>
+            </div>
+          </div>
+
+          <!-- contact us form -->
+          <div class="col-md-3 col-sm-12 contact-form">
+            <h5 class="footer-title">Leave A Message</h5>
+            <p class="small">
+              We’d love to hear from you! Send us a message—we’ll get back to
+              you as soon as we can!
+            </p>
+            <form>
+              <input type="text" class="form-control" placeholder="Name" />
+              <input type="email" class="form-control" placeholder="Email" />
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Contact Number"
+              />
+
+              <select class="form-control">
+                <option value="" disabled selected>Select Branch</option>
+                <option value="branch1">Branch 1 - Manila</option>
+                <option value="branch2">Branch 2 - Quezon City</option>
+                <option value="branch3">Branch 3 - Cebu</option>
+                <option value="branch4">Branch 4 - Davao</option>
+              </select>
+
+              <textarea
+                class="form-control"
+                rows="3"
+                placeholder="Message"
+              ></textarea>
+              <button type="submit" class="submit-btn mt-3">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <p>Kesong Puti © 2025 All Rights Reserved</p>
+        <a href="#">Terms and Condition</a>
+      </div>
+    </footer>
+    <!-- FOOTER -->
 
     <!-- BOOTSTRAP JS -->
     <script
@@ -558,6 +657,28 @@
       });
 
       updateCartTotal();
+    </script>
+
+    <!-- BUTTON UP -->
+    <script>
+      const backToTop = document.getElementById("backToTop");
+
+      // Show button when scrolled down
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          backToTop.classList.add("show");
+        } else {
+          backToTop.classList.remove("show");
+        }
+      });
+
+      // Scroll to top when clicked
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
     </script>
   </body>
 </html>
