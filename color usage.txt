@@ -47,5 +47,5 @@ Finished
 3. Product Page
 4. Single Product Page
 5. Feedback Page
-
+6. Home Page
 

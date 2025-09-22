@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kesong Puti - Contact Us</title>
+    <title>Kesong Puti - Home</title>
 
     <!-- BOOTSTRAP -->
     <link
@@ -15,8 +15,8 @@
 
     <!-- ICONS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
 
     <!-- CSS -->
@@ -26,13 +26,13 @@
   <body>
     <!-- NAVBAR -->
     <nav
-      class="navbar navbar-expand-lg fixed-top navbar-transparent navbar-hidden navbar-visible"
+      class="navbar navbar-expand-lg fixed-top navbar-custom"
       id="mainNavbar"
     >
       <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="#"
-          ><img src="assets/logo.png" alt="Kesong Puti"
-        /></a>
+        <a class="navbar-brand fw-bold" href="#">
+          <img src="assets/logo.png" alt="Kesong Puti" />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -63,7 +63,7 @@
           id="cartBtn"
           style="cursor: pointer"
         >
-          <i class="bi bi-bag-fill fs-4"></i>
+          <i class="fa-solid fa-bag-shopping fs-4"></i>
           <span class="cart-badge" id="cartCount">2</span>
         </div>
         <!-- CART ICON -->
@@ -75,13 +75,13 @@
     <div class="cart-sidebar" id="cartSidebar">
       <!-- header -->
       <div class="cart-header">
-        <h5><i class="bi bi-bag-fill me-2"></i> Your Bag</h5>
+        <h5><i class="fa-solid fa-bag-shopping me-2"></i> Your Bag</h5>
         <button class="close-btn" id="closeCart">
-          <i class="bi bi-x-lg"></i>
+          <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
 
-      <!-- Body -->
+      <!-- body -->
       <div class="cart-body" id="cartItems">
         <!-- items -->
         <div class="cart-item">
@@ -282,8 +282,8 @@
     </section>
     <!-- FAQ -->
 
-    <!-- VINE SEPARATOR -->
-    <div class="wave-transition">
+    <!-- VINE SEPARATOR 1 -->
+    <div class="wave-transition1">
       <svg
         viewBox="0 0 1440 80"
         preserveAspectRatio="none"
@@ -311,7 +311,7 @@
         />
       </svg>
     </div>
-    <!-- VINE SEPARATOR -->
+    <!-- VINE SEPARATOR 1 -->
 
     <!-- CONTACT US -->
     <section id="inquiry">
@@ -331,7 +331,7 @@
                 <div class="col-md-6">
                   <div class="input-group">
                     <span class="input-group-text">
-                      <i class="bi bi-person"></i>
+                      <i class="fa-solid fa-user"></i>
                     </span>
                     <input
                       type="text"
@@ -344,7 +344,7 @@
                 <div class="col-md-6">
                   <div class="input-group">
                     <span class="input-group-text">
-                      <i class="bi bi-person"></i>
+                      <i class="fa-solid fa-user"></i>
                     </span>
                     <input
                       type="text"
@@ -361,7 +361,7 @@
                 <div class="col-md-6">
                   <div class="input-group">
                     <span class="input-group-text">
-                      <i class="bi bi-envelope"></i>
+                      <i class="fa-solid fa-envelope"></i>
                     </span>
                     <input
                       type="email"
@@ -374,7 +374,7 @@
                 <div class="col-md-6">
                   <div class="input-group">
                     <span class="input-group-text">
-                      <i class="bi bi-telephone"></i>
+                      <i class="fa-solid fa-phone"></i>
                     </span>
                     <input
                       type="tel"
@@ -390,7 +390,7 @@
               <div class="mt-3">
                 <div class="input-group">
                   <span class="input-group-text">
-                    <i class="bi bi-shop"></i>
+                    <i class="fa-solid fa-store"></i>
                   </span>
                   <select class="form-select" required>
                     <option value="">Select Branch</option>
@@ -427,9 +427,46 @@
     </section>
     <!-- CONTACT US -->
 
+    <!-- VINE SEPARATOR 2 -->
+    <div class="wave-transition2">
+      <svg
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <!-- two floating lines -->
+        <path
+          d="M0,20 C120,40 240,0 360,20 C480,40 600,0 720,20 C840,40 960,0 1080,20 C1200,40 1320,0 1440,20"
+          fill="none"
+          stroke="#fefaf6"
+          stroke-width="8"
+        />
+        <path
+          d="M0,40 C120,60 240,20 360,40 C480,60 600,20 720,40 C840,60 960,20 1080,40 C1200,60 1320,20 1440,40"
+          fill="none"
+          stroke="#fefaf6"
+          stroke-width="8"
+        />
+        <!-- last wave: bottom filled green (becomes top of green section) -->
+        <path
+          d="M0,60 C120,80 240,40 360,60 C480,80 600,40 720,60 C840,80 960,40 1080,60 C1200,80 1320,40 1440,60 L1440,80 L0,80 Z"
+          fill="#fefaf6"
+          stroke="#fefaf6"
+          stroke-width="8"
+        />
+      </svg>
+    </div>
+    <!-- VINE SEPARATOR 2 -->
+
     <!-- SEPARATOR -->
     <div class="footer-separator"></div>
     <!-- SEPARATOR -->
+
+    <!-- FLOATING BUTTON -->
+    <button id="backToTop">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+    <!-- FLOATING BUTTON -->
 
     <!-- FOOTER -->
     <footer>
@@ -530,47 +567,19 @@
     <script>
       (function () {
         const navbar = document.getElementById("mainNavbar");
-        const hero = document.querySelector(".header-section");
-
-        function setTopState() {
-          // At the very top: transparent + visible
-          navbar.classList.add("navbar-transparent", "navbar-visible");
-          navbar.classList.remove("navbar-scrolled", "navbar-hidden");
-        }
-
-        function setHiddenTransparent() {
-          // While scrolling inside hero: hide (slide up) + keep transparent
-          navbar.classList.add("navbar-hidden", "navbar-transparent");
-          navbar.classList.remove("navbar-visible", "navbar-scrolled");
-        }
-
-        function setVisibleColored() {
-          // After hero (second section and beyond): show (slide down) + colored background
-          navbar.classList.add("navbar-visible", "navbar-scrolled");
-          navbar.classList.remove("navbar-hidden", "navbar-transparent");
-        }
 
         function updateNavbar() {
           const y = window.scrollY;
-          const navH = navbar.offsetHeight || 0;
-          const heroH = (hero && hero.offsetHeight) || 0;
-          const heroBottom = Math.max(0, heroH - navH); // threshold to "second page"
 
           if (y <= 0) {
-            setTopState();
-            return;
-          }
-
-          if (y < heroBottom) {
-            // Still within the hero area → keep it hidden while scrolling down the hero
-            setHiddenTransparent();
+            navbar.classList.add("navbar-top");
+            navbar.classList.remove("navbar-shrink");
           } else {
-            // Past the hero → show it with background color
-            setVisibleColored();
+            navbar.classList.add("navbar-shrink");
+            navbar.classList.remove("navbar-top");
           }
         }
 
-        // Init + on scroll
         window.addEventListener("scroll", updateNavbar, { passive: true });
         window.addEventListener("load", updateNavbar);
         document.addEventListener("DOMContentLoaded", updateNavbar);
@@ -677,6 +686,28 @@
       });
 
       updateCartTotal();
+    </script>
+
+    <!-- BUTTON UP -->
+    <script>
+      const backToTop = document.getElementById("backToTop");
+
+      // Show button when scrolled down
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          backToTop.classList.add("show");
+        } else {
+          backToTop.classList.remove("show");
+        }
+      });
+
+      // Scroll to top when clicked
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
     </script>
   </body>
 </html>
