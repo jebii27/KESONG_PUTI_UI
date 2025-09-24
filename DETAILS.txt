@@ -1,0 +1,115 @@
+COLOR USAGE
+
+Backgrounds
+1. Beige and Green (alternate)
+2. Cream for hero section
+
+Navbar
+1. Cream background
+2. Green navlinks
+3. Mint for hover
+
+Typography
+1. Green for headings (depending on the background)
+2. Black for paragraphs
+3. White for dark Backgrounds
+4. Yellow for highlightin text
+
+Cards
+1. White background
+2. Green Title
+3. Black body text
+4. Mint shadow
+
+Icons
+1. Primary: Green 
+2. Secondary: Azure
+3. Yellow for star reviews
+
+Forms and Inputs
+1. White input background
+2. Mint Borders
+
+Buttons
+1. Primary: Green with white text
+2. Secondary: Transparent with green text and green border
+2. CTA:Yellow with black text
+
+Footer
+1. Azure background
+2. White text
+3. Cream divider
+4. Yellow Title
+
+
+
+SYSTEM FLOW
+
+USERS - USERS - USERS - USERS - USERS - USERS - USERS - USERS - USERS - USERS
+
+1. HOME PAGE
+    - Users can view the summary of overall contents of the website.
+
+2. ABOUT PAGE
+    - This page contains the story of the family business about kesong puti.
+
+3. PRODUCTS PAGE
+    - Here you can see all the products of the website from different branches. Also the brandings of kesong puti.
+    - It has a filter functions, where you can see the product according to the type, availability and branches.
+
+4. SINGLE PRODUCT PAGE
+    - Every products has its own page for more further information about a specific product.
+    - The user can check the images of a product, add quantity and add to cart items.
+    - It also shows related products and recommendations.
+    - The single product page contains reviews with videos or images.
+
+5. CART ICON
+    - Located on the right side of the navbar.
+    - Contain items added by the user.
+    - Can add or reduce number of products.
+    - Each product has an indicator from which branch they came from.
+    - User also has the option to check or uncheck products
+    ------------------------- NOTE -------------------------
+    - NOTE: Users can only order from one branch per at a time.
+    - NOTE: Multiple items from different branches are not allowed in the cart
+    - NOTE: The system will automatically blocks the user from ordering in different branches.
+    - NOTE: The cart is per session
+
+
+6. CHECKOUT PAGE
+    - After the user finalize his/her items in the cart, the checkout button will direct them to the checkout page.
+    - In the checkout page, ut displays forms and the order summary.
+    - Users are REQUIRED to input their personal information in the forms.
+    - For delivery, input their address. For pickup, set a pickup date and time.
+    - Payment Methods are E-wallet, Bank transfer or cash.
+
+    ------------------------- NOTE -------------------------
+    - All orders and reference numbers are stored in their emails. (For tracking)
+
+7. CONTACT PAGE
+    - Here where users can contact the page for any additional information, or customized orders.
+    - Also, users can see different branches including their store name, owners, contact details, socials and location.
+
+5. FEEDBACK PAGE
+    - This is where users can submit their feedbacks.
+    - The system will automatically fetch the feedback and store them depending on what product was ordered.
+    ------------------------- NOTE -------------------------
+    - NOTE: Since users have no accounts, REFERENCE NUMBERS ARE VERY IMPORTANT, because these are required to be entered by the users when submitting feedbacks.
+    - NOTE: REFERENCE NUMBERS are only the valid entry when submitting feedbacks. It is crucial to avoid spams and fake reviews.
+    - NOTE: The reference numbers can only be used once, the system will automatically disable after its first use to prevent it from being used again.
+
+6. FAQ
+    - These are for common questions from the customers.
+    - If an user has additional questions that is not included in the FAQ, he/she can fill up the form for the answers.
+    ------------------------- NOTE -------------------------
+    - NOTE: All the message and answers will be received by the user through their email.
+
+
+
+
+
+QUESTIONS FOR TITA ARLENE
+1. Logo
+2. Delivery
+3. 
+
