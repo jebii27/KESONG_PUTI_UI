@@ -56,12 +56,15 @@ USERS - USERS - USERS - USERS - USERS - USERS - USERS - USERS - USERS - USERS
 3. PRODUCTS PAGE
     - Here you can see all the products of the website from different branches. Also the brandings of kesong puti.
     - It has a filter functions, where you can see the product according to the type, availability and branches.
+    - It has real time inventory in the admin side.
+    - As for availability, the cards are still displayed. There is a indicator of available or not.
 
 4. SINGLE PRODUCT PAGE
     - Every products has its own page for more further information about a specific product.
     - The user can check the images of a product, add quantity and add to cart items.
     - It also shows related products and recommendations.
     - The single product page contains reviews with videos or images.
+    - Nutritional facts, expiry date, storage instructions
 
 5. CART ICON
     - Located on the right side of the navbar.
@@ -78,17 +81,22 @@ USERS - USERS - USERS - USERS - USERS - USERS - USERS - USERS - USERS - USERS
 
 6. CHECKOUT PAGE
     - After the user finalize his/her items in the cart, the checkout button will direct them to the checkout page.
-    - In the checkout page, ut displays forms and the order summary.
+    - In the checkout page, it displays forms and the order summary.
     - Users are REQUIRED to input their personal information in the forms.
     - For delivery, input their address. For pickup, set a pickup date and time.
     - Payment Methods are E-wallet, Bank transfer or cash.
 
     ------------------------- NOTE -------------------------
-    - All orders and reference numbers are stored in their emails. (For tracking)
+    - NOTE: All orders and reference numbers are stored in their emails. (For tracking)
+    - NOTE: If user exits before payment, order should expire
 
 7. CONTACT PAGE
     - Here where users can contact the page for any additional information, or customized orders.
     - Also, users can see different branches including their store name, owners, contact details, socials and location.
+    - If the user wants to contact the branch, socials, contact number and email can be used.
+    ------------------------- WILL ADD -------------------------
+    - OPERATING HOURS PER BRANCH (OPTIONAL BITCH)
+    - EMBED LOCATIONS ON GOOGLE MAPS
 
 5. FEEDBACK PAGE
     - This is where users can submit their feedbacks.
@@ -103,13 +111,48 @@ USERS - USERS - USERS - USERS - USERS - USERS - USERS - USERS - USERS - USERS
     - If an user has additional questions that is not included in the FAQ, he/she can fill up the form for the answers.
     ------------------------- NOTE -------------------------
     - NOTE: All the message and answers will be received by the user through their email.
+    - MAILER
+
+7. SECURITY AND TECHNICAL CONCERNS
+    - Since personal information are collected, the system should have strong data privacy handling
+    - CAPTCHA protection against spams (TITINGNAN PA)
+    - Screenshot of payments must be verified before proceeding with the delivery or pickup.
+    - Users will receive order confirmation, delivery updates and feedback reference numbers via email.
 
 
+ADMIN - ADMIN - ADMIN - ADMIN - ADMIN - ADMIN - ADMIN - ADMIN - ADMIN - ADMIN
+
+1. ACCOUNTS
+    ------------------------- SUPER ADMIN -------------------------
+    - Super Admin has the power to create and remove admin accounts for other branches
+    - Super Admin is the only one who can access the CMS of the website
+    - A super admin can only manage their own section of the business. This means they can take care of everything 
+      within their branch, like managing products, handling sales, keeping track of what's in stock, looking at 
+      customer feedback, and adjusting how people pay. They can also see messages that are only for their branch.
+    ------------------------- ADMIN -------------------------
+    - Admin accounts are for the other branches of the business.
+    - Admins can only manage their own section of the business. They can manage products, sales, inventory, and 
+    customer feedback. They also handle payment options and messages specific to that branch.
+
+2. ACCOUNT SIGN IN
+    - This is only for Admins
+    - The system will automatically recognize if the account is super admin or admin only.
+
+3. ADMIN SIDEBAR
+    - Navigation for different tabs in the admin panel.
+    - It has dashboard tab that contains overview analytics and summary of Inventory
+    - It has the shop tab, where the admins can add and remove products, manage orders, and modify payment methods
+    - It has the inbox tab, where the admins can view customer messages sumitted through the contact form
+    - It has the feedback tab, where admins can view the reviews of their customers
 
 
-
-QUESTIONS FOR TITA ARLENE
+QUESTIONS
 1. Logo
-2. Delivery
-3. 
+2. Delivery, if gagamit ba na external apps or meron sila mismong delivery for delivery fee calculations.
+3. If need to include sanitation certificate or authenticity proof for food safety.
+4. Need paba ng sales
+5. ABOUT US CONTENTS
+6. TERMS AND CONDITION
+7. PRIVACY POLICY
+
 
