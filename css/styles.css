@@ -372,7 +372,7 @@
  .header-section h1 {
      color: var(--green);
      margin: 0;
-     font-size: clamp(36px, 8vw, 200px);
+     font-size: clamp(50px, 8vw, 200px);
      /* for responsiveness */
      text-align: center;
  }
@@ -551,7 +551,7 @@
  /* FOOTER */
 
 
-
+ /* UP BUTTON */
  #backToTop {
      position: fixed;
      bottom: 30px;
@@ -600,6 +600,79 @@
          transform: translateY(-8px);
      }
  }
+
+ /* UP BUTTON */
+
+
+
+
+ /* RESPONSIVENESS */
+ @media (max-width: 768px) {
+
+     /* HEADER */
+     .header-section {
+         padding: 90px 16px 120px 16px;
+     }
+
+     .breadcrumb {
+         font-size: 15px;
+     }
+
+
+
+
+
+     /* FOOTER */
+     .footer-container {
+         padding: 2rem 3rem;
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+     }
+
+     .footer-logo img {
+         max-width: 200px;
+     }
+
+     /* Contact form */
+     .contact-form input,
+     .contact-form textarea,
+     .contact-form select {
+         padding: 5px 10px;
+         font-size: 12px;
+     }
+
+     .footer-links {
+         text-align: center;
+         font-size: 15px;
+     }
+
+     .contact-info {
+         text-align: center;
+         font-size: 15px;
+     }
+
+     .footer-title {
+         font-size: 22px;
+     }
+
+     .footer-bottom {
+         font-size: 12px;
+         padding: 0.2rem 0.2rem;
+     }
+
+
+
+
+     /* UP BUTTON */
+     #backToTop {
+         width: 45px;
+         height: 45px;
+         font-size: 18px;
+     }
+ }
+
+ /* RESPONSIVENESS */
 
 
  /* ======================================== ESSENTIALS ======================================== */
@@ -1301,6 +1374,10 @@
      justify-content: space-between;
  }
 
+ .filter-bar button {
+     font-size: 0.95rem;
+ }
+
  .filter-label {
      font-weight: bold;
      margin-right: 15px;
@@ -1355,12 +1432,13 @@
  /* filter */
 
  /* products */
+
  .product-card {
      border-radius: 12px;
      overflow: hidden;
      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
      transition: transform 0.2s ease, box-shadow 0.2s ease;
-     height: 45vh;
+     min-height: 45vh;
  }
 
  .product-card:hover {
@@ -1408,7 +1486,6 @@
 
  .btn-add-to-cart:hover {
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-
  }
 
  /* PRODUCTS */
@@ -1511,6 +1588,149 @@
 
 
  /* PAGINATION */
+
+
+
+
+
+
+ /* REPONSIVENESS */
+ @media (max-width: 768px) {
+
+     /* FILTER */
+     .filter-bar {
+         padding: 12px 25px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+     }
+
+     .filter-bar button {
+         font-size: 12px;
+         display: flex;
+         gap: 2px;
+     }
+
+     .filter-bar i {
+         font-size: 5px;
+     }
+
+     .filter-label {
+         font-weight: bold;
+         margin-right: 15px;
+         font-size: 12px;
+     }
+
+     .filter-options {
+         display: flex;
+         gap: 8px;
+         align-items: center;
+     }
+
+     .dropdown-item {
+         font-size: 12px;
+         padding: 8px 15px;
+     }
+
+     .product-count {
+         font-weight: bold;
+         font-size: 12px;
+     }
+
+
+
+
+
+     /* PRODUCTS */
+     .products-container {
+         padding: 0 50px;
+     }
+
+     .product-card {
+         border-radius: 12px;
+         overflow: hidden;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+         transition: transform 0.2s ease, box-shadow 0.2s ease;
+         min-height: 40vh;
+     }
+
+     .product-card .card-body {
+         align-items: center;
+         display: flex;
+         flex-direction: column;
+     }
+
+     .card-body .card-title {
+         font-size: 1rem;
+     }
+
+     .product-card .product-price {
+         font-weight: bold;
+         font-size: 1rem;
+         color: var(--yellow);
+     }
+
+     .btn-view {
+         width: 40%;
+         border-radius: 20px;
+         padding: 5px 20px;
+         font-size: 0.8rem;
+     }
+
+     .btn-add-to-cart {
+         width: 40%;
+         border-radius: 20px;
+         padding: 5px 20px;
+         font-size: 0.8rem;
+     }
+
+
+
+
+     /* BRANDING */
+     #branding-section {
+         padding: 0 50px;
+     }
+
+     .branding {
+         display: flex;
+         flex-direction: column;
+         justify-content: start;
+         align-items: center;
+     }
+
+     .branding i {
+         font-size: 40px;
+     }
+
+     .branding h2 {
+         font-size: 20px;
+     }
+
+     .branding p {
+         text-align: center;
+         font-size: 15px;
+         margin-top: auto;
+         color: var(--black);
+     }
+
+
+
+     /* PAGINATION */
+     .pagination .page-item {
+         margin: 0 4px;
+     }
+
+     .pagination .page-link {
+         border-radius: 25px;
+         padding: 6px 11px;
+         font-weight: 500;
+         font-size: 12px;
+     }
+
+ }
+
+ /* REPONSIVENESS */
 
  /* ======================================== PRODUCTS PAGE ======================================== */
  /* ======================================== PRODUCTS PAGE ======================================== */
@@ -2360,7 +2580,6 @@
 
  .contact-container .btn-submit:hover {
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-
  }
 
 
@@ -2512,17 +2731,6 @@
      color: var(--black);
  }
 
- @media (max-width: 768px) {
-     .store-details .carousel-item .store {
-         display: none;
-     }
-
-     .store-details .carousel-item .store:first-child {
-         display: block;
-         width: 100%;
-     }
- }
-
  /* STORE DETAILS */
 
 
@@ -2555,6 +2763,166 @@
  }
 
  /* LOCATION */
+
+
+
+
+
+ /* RESPONSIVENESS */
+ @media (max-width: 768px) {
+
+     /* CONTACT FORM */
+     .contact-container {
+         padding: 0 50px;
+     }
+
+     .contact-container h1 {
+         text-align: center;
+     }
+
+
+     .contact-container h2 {
+         font-size: 12px;
+         font-weight: 500;
+         text-align: center;
+     }
+
+     .contact-container .form-control,
+     .contact-container .form-select,
+     .contact-container textarea {
+         font-size: 12px;
+     }
+
+     .input-group i {
+         font-size: 12px;
+     }
+
+     .contact-logo img {
+         position: relative;
+         width: 100%;
+     }
+
+
+
+
+     /* STORE LOCATION */
+     #store-details {
+         background-color: var(--green);
+         padding: 3rem 0 6rem 0;
+     }
+
+     .store-details h2 {
+         font-size: 5rem;
+         color: var(--white);
+         font-family: "Lilita One", sans-serif;
+         text-align: center;
+     }
+
+     .store-details .carousel-inner {
+         padding: 20px;
+         background-color: #035f2e;
+         border-radius: 20px;
+         height: auto;
+     }
+
+     .store-details .store-card {
+         border-radius: 16px;
+         overflow: hidden;
+         background: var(--white);
+         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         height: 100%;
+         font-family: "Poppins", sans-serif;
+     }
+
+     .store-details .store-card:hover {
+         transform: translateY(-6px);
+     }
+
+     .store-details .card-header-bar {
+         background: var(--yellow);
+         padding: 1rem;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 15vh;
+     }
+
+     .store-details .card-header-bar i {
+         font-size: 5rem;
+         color: var(--black);
+     }
+
+     .store-details .card-body {
+         padding: 1.2rem;
+         text-align: center;
+     }
+
+     .store-details .store-name {
+         font-weight: 700;
+         color: var(--green);
+         font-size: 1.2rem;
+         margin-bottom: 0.8rem;
+         text-align: center;
+     }
+
+     .store-details .store-info {
+         font-size: 0.9rem;
+         color: var(--black);
+         margin: 0.3rem 0;
+         border-bottom: 1px solid var(--black);
+     }
+
+     /* Social Icons */
+     .store-details .social-icons {
+         margin-top: 1rem;
+         display: flex;
+         justify-content: center;
+         gap: 12px;
+     }
+
+     .store-details .social-icons a {
+         color: var(--green);
+         font-size: 1.2rem;
+         transition: color 0.3s ease;
+     }
+
+     .store-details .social-icons a:hover {
+         color: var(--yellow);
+     }
+
+
+     .store-details .carousel-control-prev,
+     .store-details .carousel-control-next {
+         width: 50px;
+         height: 50px;
+         top: 45%;
+         background-color: var(--white);
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: var(--black);
+         font-size: 2rem;
+         z-index: 10;
+     }
+
+     .store-details .carousel-control-prev {
+         left: -60px;
+     }
+
+     .store-details .carousel-control-next {
+         right: -60px;
+     }
+
+     .store-details .carousel-control-prev:hover,
+     .store-details .carousel-control-next:hover {
+         background-color: var(--white);
+         color: var(--black);
+     }
+ }
+
+ /* RESPONSIVENESS */
 
 
  /* ======================================== CONTACT PAGE ======================================== */
